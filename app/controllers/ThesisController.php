@@ -23,37 +23,37 @@ class ThesisController extends Controller{
 			$prefijo = "";
 
 			if($career == "Ing. Ambiental"){
-				$ruta = "AMBIENTAL/TIA".$year;
+				$ruta = "../public/pdf/AMBIENTAL/TIA".$year;
 				$prefijo  = "TIA";
 			}
 
 			else if($career == "Ing. Gestión Empresarial"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/ADMINISTRACION/TA".$year;
+				$ruta = "../public/pdf/ADMINISTRACION/TA".$year;
 				$prefijo  = "TA";
 			}
 
 			else if($career == "Ing. Electromecánica"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/ELECTROMECANICA/TIEM".$year;
+				$ruta = "../public/pdf/ELECTROMECANICA/TIEM".$year;
 				$prefijo  = "TIEM";
 			}
 
 			else if($career == "Ing. Electrónica"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/ELECTRONICA/TIE".$year;
+				$ruta = "../public/pdf/ELECTRONICA/TIE".$year;
 				$prefijo  = "TIE";
 			}
 
 			else if($career == "Ing. Industrial"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/INDUSTRIAL/TII".$year;
+				$ruta = "../public/pdf/INDUSTRIAL/TII".$year;
 				$prefijo  = "TII";
 			}
 
 			else if($career == "Ing. Química"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/QUIMICA/TIQ".$year;
+				$ruta = "../public/pdf/QUIMICA/TIQ".$year;
 				$prefijo  = "TIQ";
 			}
 
 			else if($career == "Ing. Sístemas Computacionales"){
-				$ruta = "../../../../../home/julio/Documentos/tesis/SISTEMAS/TISC".$year;
+				$ruta = "../public/pdf/SISTEMAS/TISC".$year;
 				$prefijo  = "TISC";
 			}
 
@@ -81,9 +81,9 @@ class ThesisController extends Controller{
 				return "Faltan Archivos File 3";
 			}	
 
-			Input::file("indice")->move($ruta, $indice);
-			Input::file("prologo")->move($ruta, $prologo);
-			Input::file("tesis")->move($ruta, $tesis);
+			Input::file("indice")->move('../public/pdf', $indice);
+			Input::file("prologo")->move('../public/pdf', $prologo);
+			Input::file("tesis")->move('../public/pdf', $tesis);
 
 			$ModelThesis->index = $ruta.'/'.$indice;
 			$ModelThesis->prologue = $ruta.'/'.$prologo;
