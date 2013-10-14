@@ -81,20 +81,20 @@ class ThesisController extends Controller{
 				return "Faltan Archivos File 3";
 			}	
 
-				Input::file("indice")->move($ruta, $indice);
-				Input::file("prologo")->move($ruta, $prologo);
-				Input::file("tesis")->move($ruta, $tesis);
+			Input::file("indice")->move($ruta, $indice);
+			Input::file("prologo")->move($ruta, $prologo);
+			Input::file("tesis")->move($ruta, $tesis);
 
-				$ModelThesis->index = $ruta.'/'.$indice;
-				$ModelThesis->prologue = $ruta.'/'.$prologo;
-				$ModelThesis->thesis = $ruta.'/'.$tesis;
+			$ModelThesis->index = $ruta.'/'.$indice;
+			$ModelThesis->prologue = $ruta.'/'.$prologo;
+			$ModelThesis->thesis = $ruta.'/'.$tesis;
 
-				if($ModelThesis->save()){
-					return "Tesis Guardada";
-				}else{
-					return "Error al Guardar la Tesis";
-				}
-
+			if($ModelThesis->save()){
+				return "Tesis Guardada";
+			}else{
+				return "Error al Guardar la Tesis";
+			}
+				
 		}else{
 			return Redirect::to('/');
 		}
