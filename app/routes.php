@@ -61,7 +61,16 @@ Route::post('/adminalta', 'UserController@getThesis');
 //tesis  nueva
 Route::post('/thesis', 'ThesisController@agregarTesis');
 
+Route::get('/test', function () {
 
+	 $user = Sentry::createUser(array(
+        'email'    => 'jose@email.com',
+        'password' => 'root',
+    ));
+
+	 return "Ok";
+
+});
 
 
 

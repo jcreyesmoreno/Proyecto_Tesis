@@ -69,21 +69,9 @@ class ThesisController extends Controller{
 			$prologo = $prefijo.$ModelThesis->id.'-'.$y.'-PROLOGO.pdf';
 			$tesis = $prefijo.$ModelThesis->id.'-'.$y.'-TESIS.pdf';
 
-			if(!Input::hasFile("indice")){
-				return "Faltan Archivos File";
-			}	
-
-			if(!Input::hasFile("prologo")){
-				return "Faltan Archivos File 2";
-			}	
-
-			if(!Input::hasFile("tesis")){
-				return "Faltan Archivos File 3";
-			}	
-
-			Input::file("indice")->move('../public/pdf', $indice);
-			Input::file("prologo")->move('../public/pdf', $prologo);
-			Input::file("tesis")->move('../public/pdf', $tesis);
+			Input::file("indice")->move('../public/pdf', $prefijo.$indice);
+			Input::file("prologo")->move('../public/pdf', $prefijo.$prologo);
+			Input::file("tesis")->move('../public/pdf', $prefijo.$tesis);
 
 			$ModelThesis->index = $ruta.'/'.$indice;
 			$ModelThesis->prologue = $ruta.'/'.$prologo;

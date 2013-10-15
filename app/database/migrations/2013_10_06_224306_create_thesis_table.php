@@ -20,6 +20,7 @@ class CreateThesisTable extends Migration {
 			$table->string('index');
 			$table->string('prologue');
 			$table->string('thesis');
+			$table->timestamps();
 		});
 	}
 
@@ -30,7 +31,7 @@ class CreateThesisTable extends Migration {
 	 */
 	public function down()
 	{
-		schema::drop('thesis');
+		Schema::drop('thesis');
 	}
 
 }
