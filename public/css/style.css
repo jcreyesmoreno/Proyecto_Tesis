@@ -90,6 +90,8 @@ ul#mainmenu li a:hover{
   *zoom: 1;
   min-height: 300px;
   background-color: #003366;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .formulario1{
@@ -102,6 +104,38 @@ ul#mainmenu li a:hover{
   *zoom: 1;
   min-height: 70px;
   background-color: #003366;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.formulario2{
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  min-height: 70px;
+  background-color: #003366;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.formulario3{
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  min-height: 70px;
+  background-color: #003366;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
 }
 
 

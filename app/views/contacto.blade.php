@@ -4,7 +4,7 @@
 <div class="formulario">
 	<form id="contacto" name="contacto" action="enviar.php" method="post">
 		<label>Nombre:</label>
-		<input type="text" name="nombre" size="20">
+		<input type="text" name="nombre" size="28">
 			</br>
 			</br>
 
@@ -15,7 +15,7 @@
 		<label>Mensaje:</label>
 			</br>
 			</br>
-		<textarea id="tfMensaje" cols="30" rows="10" name="mensaje"></textarea>
+		<textarea id="tfMensaje" cols="40" rows="10" name="mensaje"></textarea>
 			</br>
 			
 		<input type="submit" value="Enviar" name="b1">

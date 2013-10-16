@@ -7,15 +7,16 @@
   <title></title>
 </head>
 <body>
-
+  <h4 aling="center">INTRODUCE LA INFORMACION DE LA NUEVA TESIS</h4>
+<div class="formulario3">
 <form enctype="multipart/form-data" action="/thesis" method="post">
-    <p align="center">Título: 
+    <p>Título: 
       <input type="text" name="nombre" size="30">
     </p>
-    <p align="center">Autor: 
+    <p>Autor: 
       <input type="text" name="autor" size="30">
     </p>
-    <p align="center">Carrera: 
+    <p>Carrera: 
       <select name="carrera" id="opcion">
       <option value="Ing.Ambiental">Ing. Ambiental</option>
       <option value="Ing.Electromecánica">Ing. Electromecánica</option>
@@ -25,8 +26,8 @@
       <option value="Ing.Química">Ing. Química</option>
       <option value="Ing.Sistemas Computacionales">Ing. Sistemas Computacionales</option>
       </select>
-    </p>
-    <p align="center">Año:
+    
+    <p>Año:
       <select name="year" id="opcion">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
@@ -54,19 +55,20 @@
       <option value="2013">2013</option>
       </select>    
     </p>
-    <p align="center">indice(archivo)
+    <p>indice(archivo)
       <input type="file" name="indice">
     </p>
-    <p align="center">Prologo(archivo)
+    <p>Prologo(archivo)
       <input type="file" name="prologo">
     </p>
-    <p align="center">Tesis(archivo)
+    <p>Tesis(archivo)
       <input type="file" name="tesis">
     </p>
     <p>
       <input type="submit" value="Agregar Tesis">
     </p>
   </form>
+</div>
 </body>
 </html>
 @endsection
