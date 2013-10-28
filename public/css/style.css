@@ -15,7 +15,7 @@ header{
 }
 
 .title-p{
-    padding: 50px;
+    padding: 30px;
     color: #FFF;
     font-size: 25px;
     /*text-shadow: 0 1px 0 #ccc, 
@@ -33,23 +33,23 @@ header{
 }
 
 .container-main{
-
-  width: 1000px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 635px;
-  background-color: #CCCCFF;
+  background-color: #B2B2B2;
 }
 
 nav{
-  width: 1000px;
-  margin: 0px;
+  width: 550px;
   height: 40px;
+  line-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  background: #333;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  background: #CCCCFF;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 ul#mainmenu, ul#mainmenu ul{
@@ -61,14 +61,15 @@ ul#mainmenu, ul#mainmenu ul{
 ul#mainmenu li{
   display: inline-block;
   text-align: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 5px 20px 15px 20px;
   position: relative;
   line-height: 18px;
 }
 
 ul#mainmenu li a{
-  color: #FFFFFF;
+  color: #000000;
   text-decoration: none;
   font-weight: bolder;
 }
@@ -84,7 +85,7 @@ ul#mainmenu li a:hover{
   color: #FFFFFF;
   padding: 30px;
   margin: 20px;
-  width: 350px;
+  width: 310px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -124,7 +125,6 @@ ul#mainmenu li a:hover{
 }
 
 .formulario3{
-  text-align: center;
   color: #FFFFFF;
   padding: 20px;
   margin: 20px;
@@ -137,5 +137,21 @@ ul#mainmenu li a:hover{
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
+
+.formulario4{
+  
+  color: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  min-height: 70px;
+  background-color: #003366;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
 
 

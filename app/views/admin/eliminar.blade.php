@@ -1,4 +1,4 @@
-@extends('layout_admin')
+<!--@extends('layout_admin')
 
 @section('content')
 <html lang="es">
@@ -14,3 +14,4 @@
 </boby>
 </html>
 @endsection
+-->

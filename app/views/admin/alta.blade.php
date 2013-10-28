@@ -7,27 +7,25 @@
   <title></title>
 </head>
 <body>
-  <h4 aling="center">INTRODUCE LA INFORMACION DE LA NUEVA TESIS</h4>
+  <h4 align="center">INTRODUCE LA INFORMACION DE LA NUEVA TESIS</h4>
 <div class="formulario3">
 <form enctype="multipart/form-data" action="/thesis" method="post">
-    <p>Título: 
-      <input type="text" name="nombre" size="30">
-    </p>
-    <p>Autor: 
-      <input type="text" name="autor" size="30">
-    </p>
-    <p>Carrera: 
+    <p>Título:</br> 
+      <input type="text" name="nombre" size="45"></br>
+    <p>Autor:</br> 
+      <input type="text" name="autor" size="45"></br>
+    <p align="center">Carrera:</br> 
       <select name="carrera" id="opcion">
-      <option value="Ing.Ambiental">Ing. Ambiental</option>
-      <option value="Ing.Electromecánica">Ing. Electromecánica</option>
-      <option value="Ing.Electrónica">Ing. Electrónica</option>
-      <option value="Ing.Industrial">Ing. Industrial</option>
-      <option value="Ing.Gestión Empresarial">Ing. Gestión Empresarial</option>
-      <option value="Ing.Química">Ing. Química</option>
-      <option value="Ing.Sistemas Computacionales">Ing. Sistemas Computacionales</option>
+      <option value="Ambiental">Ing. Ambiental</option>
+      <option value="Electromecanica">Ing. Electromecánica</option>
+      <option value="Electronica">Ing. Electrónica</option>
+      <option value="Industrial">Ing. Industrial</option>
+      <option value="Gestion">Ing. Gestión Empresarial</option>
+      <option value="Quimica">Ing. Química</option>
+      <option value="Sistemas">Ing. Sistemas Computacionales</option>
       </select>
     
-    <p>Año:
+    <p align="center">Año:</br>
       <select name="year" id="opcion">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
@@ -64,7 +62,7 @@
     <p>Tesis(archivo)
       <input type="file" name="tesis">
     </p>
-    <p>
+    <p align="center">
       <input type="submit" value="Agregar Tesis">
     </p>
   </form>

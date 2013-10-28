@@ -12,13 +12,9 @@
 				</div>
 			<div class="titulo">
     		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
-    	</div>	
-		</header>
 		<nav>
 			<ul id="mainmenu">
 				<li><a href="/newtesis">Nueva tesis</a>
-				</li>
-				<li><a href="/deletetesis">Eliminar tesis</a>
 				</li>
 				<li><a href="/searchtesis">Buscar</a>
 				</li>	
@@ -28,6 +24,8 @@
 				</li>	
 			</ul>	
 		</nav>
+		</div>	
+		</header>
 		<article id="contenido">
 			@yield('content')
 		</article>

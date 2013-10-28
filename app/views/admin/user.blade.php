@@ -8,24 +8,24 @@
 <body>
 	<div class="container-main">
 		<header>
-	      <div class="logo-derecho">
-				</div>
+	      	<div class="logo-derecho">
+			</div>
 			<div class="titulo">
     		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
-    	</div>	
-		</header>
-		<nav>
+			<nav>
 			<ul id="mainmenu">
 				<li><a href="/newtesis">Nueva tesis</a>
 				</li>
-				<li><a href="deletetesis">Eliminar tesis</a>
+				<li><a href="/searchtesis">Buscar</a>
 				</li>
-				<li><a href="searchtesis">Buscar</a>
+				<li><a href="/deletetesis">Cambiar contraseña</a>
 				</li>	
 				<li><a href="/logout">salir</a>
 				</li>	
 			</ul>	
-		</nav>
+			</nav>
+			</div>
+		</header>
 		<article id="contenido">
 			@yield('content')
 		</article>

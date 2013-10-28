@@ -7,11 +7,14 @@
   <title></title>
 </head>
 <body>
-<form name="consulta" action=""  method="post">
-    <p align="center">Introdusca ID:  <input type="text" name="id" size="30">
-    <p align="center">Nombre de la tesis: <input type="text" name="nombre" size="30"></br>
-          <p align="center">Autor: <input type="text" name="autor" size="30"></br>
-          <p align="center">Carrera: 
+  <div class="formulario4">
+  <form name="consulta" action="/search"  method="post">
+    <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
+    <p>Nombre de la tesis:</br>
+      <input type="text" name="nombre" size="45"></br>
+    <p>Autor:</br>
+      <input type="text" name="autor" size="45"></br>
+          <p>Carrera: 
           <select name="opcion" id="opcion">
           <option value="2">Ing. Ambiental</option>
           <option value="3">Ing. Electromecánica</option>
@@ -21,7 +24,7 @@
           <option value="5">Ing. Química</option>
           <option value="5">Ing. Sistemas Computacionales</option>
           </select>
-          </br>
+          
           <p align="center">Año:
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
@@ -54,6 +57,7 @@
          
     <input type="submit" value="Buscar" name="consultar" >
 </form>
+</div>
 </body>
 </html>
 @endsection
