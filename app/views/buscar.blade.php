@@ -3,15 +3,16 @@
 @section('content')
 <!--<script type="text/javascript" src="js/ajax_script.js">
 </script>-->
-<h2 align="center">Métodos de Busqueda</h2>
-  <div class="formulario4">
+
+<h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h2>
+  <div id="formulario4">
   <form name="consulta" action="/search"  method="post">
     <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
     <p>Nombre de la tesis:</br>
-      <input type="text" name="nombre" size="45"></br>
+      <input type="text" name="nombre" class="campo4"></br>
     <p>Autor:</br>
-      <input type="text" name="autor" size="45"></br>
-          <p>Carrera: 
+      <input type="text" name="autor" class="campo4"></br>
+          <p align="center">Carrera: 
           <select name="opcion" id="opcion">
           <option value="2">Ing. Ambiental</option>
           <option value="3">Ing. Electromecánica</option>
@@ -20,6 +21,7 @@
           <option value="6">Ing. Gestión Empresarial</option>
           <option value="5">Ing. Química</option>
           <option value="5">Ing. Sistemas Computacionales</option>
+          <option value="5">Lic. Administración</option>
           </select>
           
           <p align="center">Año:
@@ -52,7 +54,7 @@
           </br> 
           </br>  
          
-    <input type="submit" value="Buscar" name="consultar" >
+    <input type="submit" value="Buscar" class="buscar" name="consultar" >
 </form>
 </div>
 <!--<input type="button" id="boton" value="Abrir cuadro de diálogo">

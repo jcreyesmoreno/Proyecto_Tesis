@@ -1,6 +1,10 @@
+*{
+  font-family: arial;
+}
 body{
 	padding: 0px;
 	margin: 0px;
+  background: #CCCCCC;
 }
 
 header{
@@ -9,10 +13,14 @@ header{
 	width: 100%;
 }
 
-.header-logo-derecho{
+/*.header-logo-derecho{
 	height: 130px;
 	width: 100%;
 }
+
+.logo{
+
+}*/
 
 .title-p{
     padding: 30px;
@@ -37,7 +45,6 @@ header{
   margin-right: auto;
   *zoom: 1;
   min-height: 635px;
-  background-color: #B2B2B2;
 }
 
 nav{
@@ -47,7 +54,7 @@ nav{
   margin-left: auto;
   margin-right: auto;
   display: block;
-  background: #CCCCFF;
+  background-color: #EEE;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
@@ -76,82 +83,155 @@ ul#mainmenu li a{
 
 ul#mainmenu li a:hover{
   
-  color: orange;
+  color: #003366;
 }
 
 /*formulario*/
 
-.formulario{
-  color: #FFFFFF;
-  padding: 30px;
-  margin: 20px;
-  width: 310px;
+#formulario{
+  color: #003366;
+  width: 330px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 300px;
-  background-color: #003366;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
-.formulario1{
-  color: #FFFFFF;
-  padding: 20px;
-  margin: 20px;
-  width: 260px;
+#formulario1{
+  color: #003366;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 70px;
-  background-color: #003366;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
-.formulario2{
+#formulario2{
   text-align: center;
-  color: #FFFFFF;
-  padding: 20px;
-  margin: 20px;
+  color: #003366;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 70px;
-  background-color: #003366;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
-.formulario3{
-  color: #FFFFFF;
-  padding: 20px;
-  margin: 20px;
+#formulario3{
+  color: #003366;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 70px;
-  background-color: #003366;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
-.formulario4{
-  
-  color: #FFFFFF;
-  padding: 20px;
-  margin: 20px;
+#formulario4{
+  color: #003366;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
   min-height: 70px;
-  background-color: #003366;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 
+textarea{
+  width: 400px;
+  height: 200px;
+}
+
+.campo, textarea{
+  background:#EEE;
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 300px;
+  -webkit-border-radius: 3px;
+} 
+
+.campo:focus, textarea:focus{
+  background: #FFF;
+  outline: none;
+  -webkit-box-shadow: 0 0 10px #003366;
+}
+
+.campo1{
+  background:#EEE;
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 250px;
+  -webkit-border-radius: 3px;
+} 
+
+.campo1:focus{
+  background: #FFF;
+  outline: none;
+  -webkit-box-shadow: 0 0 10px #003366;
+}
+
+.campo3{
+  background:#EEE;
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 350px;
+  -webkit-border-radius: 3px;
+} 
+
+.campo3:{
+  background: #FFF;
+  outline: none;
+  -webkit-box-shadow: 0 0 10px #003366;
+}
+
+.campo4{
+  background:#EEE;
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 350px;
+  -webkit-border-radius: 3px;
+} 
+
+.campo4:focus{
+  background: #FFF;
+  outline: none;
+  -webkit-box-shadow: 0 0 10px #003366;
+}
+
+
+#footer{
+  text-align: center;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bolder;
+  padding-top: 15px;
+}
+
+.buscar{
+  background: #FF6600;
+  border: 0;
+  padding: 10px;
+  width: 120px;
+  -webkit-border-radius: 3px;
+}
+
+.buscar:hover{
+  -webkit-box-shadow: 0 0 10px #003366;
+}
 
 

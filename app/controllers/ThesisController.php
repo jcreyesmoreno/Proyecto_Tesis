@@ -24,37 +24,37 @@ class ThesisController extends Controller{
 
 			if($career == "Ambiental"){
 				$ruta = "../public/pdf/AMBIENTAL/TIA".$year;
-				$prefijo  = "TIA";
+				$prefijo  = "";
 			}
 
 			else if($career == "Gestion"){
 				$ruta = "../public/pdf/ADMINISTRACION/TA".$year;
-				$prefijo  = "TA";
+				$prefijo  = "";
 			}
 
 			else if($career == "Electromecanica"){
 				$ruta = "../public/pdf/ELECTROMECANICA/TIEM".$year;
-				$prefijo  = "TIEM";
+				$prefijo  = "";
 			}
 
 			else if($career == "Electronica"){
 				$ruta = "../public/pdf/ELECTRONICA/TIE".$year;
-				$prefijo  = "TIE";
+				$prefijo  = "";
 			}
 
 			else if($career == "Industrial"){
 				$ruta = "../public/pdf/INDUSTRIAL/TII".$year;
-				$prefijo  = "TII";
+				$prefijo  = "";
 			}
 
 			else if($career == "Quimica"){
 				$ruta = "../public/pdf/QUIMICA/TIQ".$year;
-				$prefijo  = "TIQ";
+				$prefijo  = "";
 			}
 
 			else if($career == "Sistemas"){
 				$ruta = "../public/pdf/SISTEMAS/TISC".$year;
-				$prefijo  = "TISC";
+				$prefijo  = "";
 			}
 
 			$ModelThesis = new Thesis;

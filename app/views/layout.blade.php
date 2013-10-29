@@ -27,9 +27,12 @@
 			</div>
 		</header>
 		<article id="contenido">
+			<div class="logo"></div>
 			@yield('content')
 		</article>
 	</div>	
+	<div id="footer">Derechos Reservados 2013
+	</div>
 </body>
 </html>
 
