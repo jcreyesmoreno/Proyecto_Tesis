@@ -89,10 +89,13 @@ ul#mainmenu li a:hover{
 /*formulario*/
 
 #formulario{
+  text-align: center;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
   color: #003366;
-  width: 330px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 500px;
+  margin: 0 auto;
   *zoom: 1;
   min-height: 300px;
   -webkit-border-radius: 8px;
@@ -100,8 +103,12 @@ ul#mainmenu li a:hover{
 }
 
 #formulario1{
+  text-align: center;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
   color: #003366;
-  width: 300px;
+  width: 450px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -110,7 +117,7 @@ ul#mainmenu li a:hover{
   border-radius: 8px;
 }
 
-#formulario2{
+/*#formulario2{
   text-align: center;
   color: #003366;
   width: 400px;
@@ -120,11 +127,15 @@ ul#mainmenu li a:hover{
   min-height: 70px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
-}
+}*/
 
 #formulario3{
+  text-align: center;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
   color: #003366;
-  width: 400px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -134,8 +145,12 @@ ul#mainmenu li a:hover{
 }
 
 #formulario4{
+  text-align: center;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
   color: #003366;
-  width: 400px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -171,8 +186,9 @@ textarea{
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 8px;
-  width: 250px;
+  width: 300px;
   -webkit-border-radius: 3px;
+
 } 
 
 .campo1:focus{
@@ -187,11 +203,11 @@ textarea{
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 8px;
-  width: 350px;
+  width: 400px;
   -webkit-border-radius: 3px;
 } 
 
-.campo3:{
+.campo3:focus{
   background: #FFF;
   outline: none;
   -webkit-box-shadow: 0 0 10px #003366;
@@ -203,7 +219,7 @@ textarea{
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 8px;
-  width: 350px;
+  width: 400px;
   -webkit-border-radius: 3px;
 } 
 
@@ -227,6 +243,7 @@ textarea{
   border: 0;
   padding: 10px;
   width: 120px;
+  margin: 0 auto;
   -webkit-border-radius: 3px;
 }
 

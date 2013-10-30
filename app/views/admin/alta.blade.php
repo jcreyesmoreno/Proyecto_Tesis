@@ -14,7 +14,7 @@
       <input type="text" name="nombre" class="campo3"></br>
     <p>Autor:</br> 
       <input type="text" name="autor" class="campo3"></br>
-    <p align="center">Carrera:</br> 
+    <p>Carrera:</br> 
       <select name="carrera" id="opcion">
       <option value="Ambiental">Ing. Ambiental</option>
       <option value="Electromecanica">Ing. Electromecánica</option>
@@ -25,7 +25,7 @@
       <option value="Sistemas">Ing. Sistemas Computacionales</option>
       </select>
     
-    <p align="center">Año:</br>
+    <p>Año:</br>
       <select name="year" id="opcion">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
@@ -63,7 +63,7 @@
       <input type="file" name="tesis">
     </p>
     <p align="center">
-      <input type="submit" value="Agregar Tesis">
+      <input type="submit" class="buscar" value="Agregar Tesis">
     </p>
   </form>
 </div>

@@ -7,7 +7,7 @@
   <title></title>
 </head>
 <body>
-  <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h2>
+  <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4>
   <div id="formulario4">
   <form name="consulta" action="/search" method="post">
     <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
@@ -27,7 +27,7 @@
           <option value="5">Lic. Administración</option>
           </select>
           
-          <p align="center">Año:
+          <p>Año:
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
           <option value="3">1991</option>
@@ -56,8 +56,9 @@
           </select>
           </br> 
           </br>  
-         
+    <p align="center">     
     <input type="submit" value="Buscar" class="buscar" name="consultar" >
+  </p>
 </form>
 </div>
 </body>

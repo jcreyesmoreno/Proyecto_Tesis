@@ -1,8 +1,7 @@
 @extends('layout')
 
 @section('content')
-</br>
-</br>
+	<h4 align="center">INTRUDUCE TU USUARIO Y CONTRASEÑA</h4>
 	<div id="formulario1">
             <form action="/userAdmin"  method="post">
 			<p>Usuario:</br>

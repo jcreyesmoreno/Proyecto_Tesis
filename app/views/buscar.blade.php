@@ -6,13 +6,13 @@
 
 <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h2>
   <div id="formulario4">
-  <form name="consulta" action="/search"  method="post">
+    <form name="consulta" action="/search"  method="post">
     <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
-    <p>Nombre de la tesis:</br>
+    <p>Búsqueda por nombre de la tesis:</br>
       <input type="text" name="nombre" class="campo4"></br>
-    <p>Autor:</br>
+    <p>Búsqueda por autor:</br>
       <input type="text" name="autor" class="campo4"></br>
-          <p align="center">Carrera: 
+          <p>Por carrera: 
           <select name="opcion" id="opcion">
           <option value="2">Ing. Ambiental</option>
           <option value="3">Ing. Electromecánica</option>
@@ -24,7 +24,7 @@
           <option value="5">Lic. Administración</option>
           </select>
           
-          <p align="center">Año:
+          <p>Por año:
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
           <option value="3">1991</option>
@@ -53,40 +53,10 @@
           </select>
           </br> 
           </br>  
-         
+    <p align="center">    
     <input type="submit" value="Buscar" class="buscar" name="consultar" >
-</form>
-</div>
-<!--<input type="button" id="boton" value="Abrir cuadro de diálogo">
-<div id="dialogo" title="Cuadro de diálogo">
-<p>
-<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Ejemplo de cuadro de diálogo, pon aquí tu aviso</p>
-</div>-->
-
-      
-     <!--<div class="formulario2">
-          <form enctype="" action="" method="post">
-            <p><span class="Estilo">selecciona un método de búsqueda: </span></p>
-      <p>
-        <select name="opcion" id="opcion">
-          <option value="2">Identificador</option>
-          <option value="3">Carrera</option>
-          <option value="4">Título</option>
-          <option value="5">Autor</option>
-          <option value="6">Fecha (ejem: 2001)</option>
-          
-        </select>
-            </p>
-                 <p class="Estilo">Escribe nombre de carrera, titulo,autor o fecha de la tesis</p>
-      <p align="center" class="Estilo"> 
-        <input name="nombre" type="text" id="nombre" size="48" />
-      </p>
-      <p class="Estilo1">    
-        <input type="submit" value="Buscar" name="ok" id="ok" />
-      </p>
-        </form>
-         
-         </div>-->   
-     
-    
+    </p>
+    </form>
+  </div>
+ 
 @endsection
