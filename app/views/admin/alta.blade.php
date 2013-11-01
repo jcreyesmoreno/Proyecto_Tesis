@@ -10,11 +10,11 @@
   <h4 align="center">INTRODUCE LA INFORMACION DE LA NUEVA TESIS</h4>
 <div id="formulario3">
 <form enctype="multipart/form-data" action="/thesis" method="post">
-    <p>Título:</br> 
+    <label>Título:</label></br> 
       <input type="text" name="nombre" class="campo3"></br>
-    <p>Autor:</br> 
-      <input type="text" name="autor" class="campo3"></br>
-    <p>Carrera:</br> 
+    <label>Autor:</label></br> 
+      <input type="text" name="autor" class="campo3"></br></br>
+    <label>Carrera:</label>
       <select name="carrera" id="opcion">
       <option value="Ambiental">Ing. Ambiental</option>
       <option value="Electromecanica">Ing. Electromecánica</option>
@@ -25,7 +25,7 @@
       <option value="Sistemas">Ing. Sistemas Computacionales</option>
       </select>
     
-    <p>Año:</br>
+    <label>Año:</label>
       <select name="year" id="opcion">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
@@ -52,7 +52,7 @@
       <option value="2012">2012</option>
       <option value="2013">2013</option>
       </select>    
-    </p>
+  
     <p>Indice(archivo)
       <input type="file" name="indice">
     </p>

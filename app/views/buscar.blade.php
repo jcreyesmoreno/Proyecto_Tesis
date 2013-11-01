@@ -4,15 +4,15 @@
 <!--<script type="text/javascript" src="js/ajax_script.js">
 </script>-->
 
-<h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h2>
+<h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4>
   <div id="formulario4">
     <form name="consulta" action="/search"  method="post">
     <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
-    <p>Búsqueda por nombre de la tesis:</br>
+    <label>Búsqueda por nombre de la tesis:</label></br>
       <input type="text" name="nombre" class="campo4"></br>
-    <p>Búsqueda por autor:</br>
-      <input type="text" name="autor" class="campo4"></br>
-          <p>Por carrera: 
+    <label>Búsqueda por autor:</label></br>
+      <input type="text" name="autor" class="campo4"></br></br>
+          <label>Por carrera:</label>
           <select name="opcion" id="opcion">
           <option value="2">Ing. Ambiental</option>
           <option value="3">Ing. Electromecánica</option>
@@ -24,7 +24,7 @@
           <option value="5">Lic. Administración</option>
           </select>
           
-          <p>Por año:
+          <label>Por año:</label>
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
           <option value="3">1991</option>

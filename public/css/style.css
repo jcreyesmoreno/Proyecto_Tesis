@@ -4,13 +4,15 @@
 body{
 	padding: 0px;
 	margin: 0px;
-  background: #CCCCCC;
+  background: #FFF;
 }
 
 header{
 	background-color: #003366;
 	height: 150px;
-	width: 100%;
+	width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*.header-logo-derecho{
@@ -54,9 +56,8 @@ nav{
   margin-left: auto;
   margin-right: auto;
   display: block;
-  background-color: #EEE;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  background-color: #CCCCCC;
+  
 }
 
 ul#mainmenu, ul#mainmenu ul{
@@ -86,15 +87,28 @@ ul#mainmenu li a:hover{
   color: #003366;
 }
 
+#contenido{
+  padding: 10px;
+  margin: 10px;
+  width: 1000px;
+  height: 550px;
+  margin-right: auto;
+  margin-left: auto;
+  border-color: #CCCCCC;
+  border-style: solid;
+
+}
+
 /*formulario*/
 
 #formulario{
   text-align: center;
   border-style: solid;
-  border-color: #000;
+  border-color: #0000;
   border-width: 1px;
   color: #003366;
   width: 500px;
+  padding: 20px;
   margin: 0 auto;
   *zoom: 1;
   min-height: 300px;
@@ -105,14 +119,14 @@ ul#mainmenu li a:hover{
 #formulario1{
   text-align: center;
   border-style: solid;
-  border-color: #000;
+  border-color: #0000;
   border-width: 1px;
   color: #003366;
   width: 450px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
-  min-height: 70px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
@@ -132,10 +146,11 @@ ul#mainmenu li a:hover{
 #formulario3{
   text-align: center;
   border-style: solid;
-  border-color: #000;
+  border-color: #0000;
   border-width: 1px;
   color: #003366;
   width: 500px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -147,10 +162,11 @@ ul#mainmenu li a:hover{
 #formulario4{
   text-align: center;
   border-style: solid;
-  border-color: #000;
+  border-color: #0000;
   border-width: 1px;
   color: #003366;
   width: 500px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;
@@ -166,7 +182,8 @@ textarea{
 
 .campo, textarea{
   background:#EEE;
-  border: 0;
+  border-color:#000;
+  border-width: 1px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 6px;
@@ -182,9 +199,10 @@ textarea{
 
 .campo1{
   background:#EEE;
-  border: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-color:#000;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 6px;
   width: 300px;
   -webkit-border-radius: 3px;
@@ -199,7 +217,8 @@ textarea{
 
 .campo3{
   background:#EEE;
-  border: 0;
+  border-color:#000;
+  border-width: 1px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 6px;
@@ -215,7 +234,8 @@ textarea{
 
 .campo4{
   background:#EEE;
-  border: 0;
+  border-color:#000;
+  border-width: 1px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 6px;
@@ -250,5 +270,62 @@ textarea{
 .buscar:hover{
   -webkit-box-shadow: 0 0 10px #003366;
 }
+
+/*validacion del formulario contacto*/
+.errores{
+  display: none;
+  position: absolute;
+  margin-top: -80px; 
+  margin-left: 340px;
+  padding: 10px;
+}
+
+/*tabla*/
+.table{
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.tabla{
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 10px 10px 5px #888888;
+  border:1px solid #000000;
+  -moz-border-radius-bottomleft:9px;
+  -webkit-border-bottom-left-radius:9px;
+  border-bottom-left-radius:9px;
+  -moz-border-radius-bottomright:9px;
+  -webkit-border-bottom-right-radius:9px;
+  border-bottom-right-radius:9px;
+  -moz-border-radius-topright:9px;
+  -webkit-border-top-right-radius:9px;
+  border-top-right-radius:9px;
+  -moz-border-radius-topleft:9px;
+  -webkit-border-top-left-radius:9px;
+  border-top-left-radius:9px;
+}
+
+.num, .tit, .carr, .ind, .prol, .tes, .ver1, .ver2, .ver3, .del, .view{
+  text-align: center;
+  text-decoration: none;
+}
+
+.num{
+  width: 5%;
+}
+
+.tit{
+  width: 50%;
+}
+
+.carr, .ind, .prol, .tes, .ver1, .ver2, .ver3, .del{
+  width: 10%;
+
+}
+
+
+
+
+
 
 
