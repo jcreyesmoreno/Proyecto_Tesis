@@ -8,16 +8,17 @@
 	{{ HTML::style('css/style.css') }}
 	</head>
 	<body>
-		<h2 align="center">RESULTADOS DE LA BUSQUEDA</h2>
 		<div class="table">
+		<h2 align="center">RESULTADOS DE LA BUSQUEDA</h2>
+		</div>
 		<table class="tabla">
 			<tr>
 				<th class="num">N°</th>
 				<th class="tit">TITULO</th>
-				<td class="carr">CARRERA</td>
-				<td class="ind">INDICE</td>
-				<td class="prol">PROLOGO</td>
-				<td class="tes">TESIS</td>
+				<th class="carr">CARRERA</th>
+				<th class="ind">INDICE</th>
+				<th class="prol">PROLOGO</th>
+				<th class="tes">TESIS</th>
 			</tr>
 		@for ($i = 0; $i < count($Thesis); $i++)
 			<tr>
@@ -31,7 +32,7 @@
 			</tr>
 		@endfor
 		</table>
-		</div>
+		
 	</boby>
 	@else
 		<p>No se ha realizado ninguna consulta</p>	

@@ -27,7 +27,6 @@
 			</div>
 		</header>
 		<article id="contenido">
-			<div class="logo"></div>
 			@yield('content')
 		</article>
 	</div>	

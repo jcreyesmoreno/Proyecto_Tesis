@@ -4,11 +4,11 @@
 body{
 	padding: 0px;
 	margin: 0px;
-  background: #FFF;
+  background-image: url("../images/fonfo2.jpg");
 }
 
 header{
-	background-color: #003366;
+	background-image: url("../images/fonfo2.jpg");
 	height: 150px;
 	width: 1100px;
   margin-left: auto;
@@ -26,9 +26,9 @@ header{
 
 .title-p{
     padding: 30px;
-    color: #FFF;
+    color: ;
     font-size: 25px;
-    /*text-shadow: 0 1px 0 #ccc, 
+    text-shadow: 0 1px 0 #ccc, 
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
                0 4px 0 #b9b9b9,
@@ -39,7 +39,7 @@ header{
                0 3px 5px rgba(0,0,0,.2),
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);*/
+               0 20px 20px rgba(0,0,0,.15);
 }
 
 .container-main{
@@ -56,7 +56,6 @@ nav{
   margin-left: auto;
   margin-right: auto;
   display: block;
-  background-color: #CCCCCC;
   
 }
 
@@ -64,6 +63,7 @@ ul#mainmenu, ul#mainmenu ul{
   list-style: none;
   padding: 5px;
   text-align: center;
+  border-right: 1px;
 }
 
 ul#mainmenu li{
@@ -94,9 +94,15 @@ ul#mainmenu li a:hover{
   height: 550px;
   margin-right: auto;
   margin-left: auto;
-  border-color: #CCCCCC;
+  border-color: #FFF;
   border-style: solid;
+}
 
+.conten{
+  background-image: url("../images/tec1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
 }
 
 /*formulario*/
@@ -173,6 +179,8 @@ ul#mainmenu li a:hover{
   min-height: 70px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 textarea{
@@ -213,6 +221,7 @@ textarea{
   background: #FFF;
   outline: none;
   -webkit-box-shadow: 0 0 10px #003366;
+  -moz-box-shadow: 0 0 10px #003366;
 }
 
 .campo3{
@@ -241,12 +250,14 @@ textarea{
   padding: 6px;
   width: 400px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 } 
 
 .campo4:focus{
   background: #FFF;
   outline: none;
   -webkit-box-shadow: 0 0 10px #003366;
+  -moz-box-shadow: 0 0 10px #003366;
 }
 
 
@@ -259,16 +270,19 @@ textarea{
 }
 
 .buscar{
-  background: #FF6600;
-  border: 0;
+  background: #CCCCCC;
+  border-color:#000;
+  border-width: 1px;
   padding: 10px;
   width: 120px;
   margin: 0 auto;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 .buscar:hover{
   -webkit-box-shadow: 0 0 10px #003366;
+  -moz-box-shadow: 0 0 10px #003366;
 }
 
 /*validacion del formulario contacto*/
@@ -288,7 +302,7 @@ textarea{
 
 .tabla{
   padding: 10px;
-  margin: 0 auto;
+  margin: 10px;
   box-shadow: 10px 10px 5px #888888;
   border:1px solid #000000;
   -moz-border-radius-bottomleft:9px;
@@ -320,12 +334,9 @@ textarea{
 
 .carr, .ind, .prol, .tes, .ver1, .ver2, .ver3, .del{
   width: 10%;
-
 }
 
 
-
-
-
+  
 
 

@@ -8,11 +8,11 @@
   <div id="formulario4">
     <form name="consulta" action="/search"  method="post">
     <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
-    <label>Búsqueda por nombre de la tesis:</label></br>
+    <label>Nombre de la tesis:</label></br>
       <input type="text" name="nombre" class="campo4"></br>
-    <label>Búsqueda por autor:</label></br>
+    <label>Autor:</label></br>
       <input type="text" name="autor" class="campo4"></br></br>
-          <label>Por carrera:</label>
+          <label>Carrera:</label>
           <select name="opcion" id="opcion">
           <option value="2">Ing. Ambiental</option>
           <option value="3">Ing. Electromecánica</option>
@@ -24,7 +24,7 @@
           <option value="5">Lic. Administración</option>
           </select>
           
-          <label>Por año:</label>
+          <label>Año</label>
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
           <option value="3">1991</option>
