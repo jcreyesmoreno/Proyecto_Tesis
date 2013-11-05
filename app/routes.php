@@ -60,6 +60,7 @@ Route::post('/adminalta', 'UserController@getThesis');
 //Metodo de POST del formulario para agregar una
 //tesis  nueva
 Route::post('/thesis', 'ThesisController@agregarTesis');
+Route::post('/thesis/delete', 'ThesisController@deleteTesis');
 
 //Muestra la tabla de tesis
 //Route::get('/thesis', 'ThesisController@getTableTesis');

@@ -112,6 +112,20 @@ class ThesisController extends Controller{
 			return "no se encontro la Tesis";
 		}		
 	}
+
+	public function deleteTesis () {
+		if(Sentry::check()){
+			$id = Input::get("id");
+			$delete = Thesis::where("id", "=", $id)->delete();
+			if($delete){
+				return ":D !!";	
+			}else{
+				return ":( !!";
+			}
+		}else{
+			return Redirect:: to("/");
+		}
+	}
 		
 }
 

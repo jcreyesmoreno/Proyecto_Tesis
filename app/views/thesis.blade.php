@@ -25,10 +25,15 @@
 				<td class="view">{{ $i + 1 }}</td>
 				<td class="view">{{ $Thesis[$i]->title }}</td>
 				<td class="view">{{ $Thesis[$i]->career }}</td>
-				<td class="ver1"><a href="/indice/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
-				<td class="ver2"><a href="/prologo/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
-				<td class="ver3"><a href="/tesis/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
-				<td class="del"><a href="">ELIMINAR</a></td>
+				<td class="ver"><a href="/indice/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
+				<td class="ver"><a href="/prologo/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
+				<td class="ver"><a href="/tesis/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
+				<td class="del">
+					<form action="/thesis/delete" method="POST">
+						<input type="hidden" name="id" value="{{ $Thesis[$i]->id }}">
+						<input type="submit" class="delete" value="Eliminar"> 
+					</form>
+				</td>
 			</tr>
 		@endfor
 		</table>
