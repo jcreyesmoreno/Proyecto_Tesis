@@ -30,7 +30,10 @@
 			@yield('content')
 		</article>
 	</div>	
-	<div id="footer">Derechos Reservados 2013
+	<div id="footer">
+		<p>Instituto Tecnológico de Minatitlán</p>
+		<p>Blvd. Institutos Tecnológicos S/N Col. Buena Vista Norte C.P. 96848</p>
+		<p>Telefono (922) 22 243 45 Minatitlán, Veracruz Llave</p>
 	</div>
 </body>
 </html>

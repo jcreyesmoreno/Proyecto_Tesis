@@ -2,32 +2,33 @@
 
 @section('content')
 <html lang="es">
-<head>
+  <head>
   <meta charset="utf-8">
   <title></title>
-</head>
-<body>
-  <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4>
-  <div id="formulario4">
-  <form name="consulta" action="/search" method="post">
-    <!--<p>Introdusca ID:  <input type="text" name="id" size="34">-->
-    <label>Nombre de la tesis:</label></br>
-      <input type="text" name="nombre" class="campo4"></br>
-    <label>Autor:</label></br>
-      <input type="text" name="autor" class="campo4"></br></br>
-          <label>Carrera:</label> 
+  </head>
+    <body>
+    <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4>
+      <div id="formulario4">
+        <form name="consulta" action="/search" method="post">
+        <label>Título:</label><br />
+        <input type="text" name="nombre" class="campo4">
+        <br />
+        <label>Autor:</label><br />
+        <input type="text" name="autor" class="campo4">
+        <br />
+          <label>Carrera:</label> <br />
           <select name="opcion" id="opcion">
-          <option value="2">Ing. Ambiental</option>
-          <option value="3">Ing. Electromecánica</option>
-          <option value="4">Ing. Electrónica</option>
-          <option value="5">Ing. Industrial</option>
-          <option value="6">Ing. Gestión Empresarial</option>
-          <option value="5">Ing. Química</option>
-          <option value="5">Ing. Sistemas Computacionales</option>
-          <option value="5">Lic. Administración</option>
+          <option value="Ambiental">ING. AMBIENTAL</option>
+          <option value="Electromecanica">ING. ELECTROMECANICA</option>
+          <option value="Electronica">ING. ELECTRONICA</option>
+          <option value="Industrial">ING. INDUSTRIAL</option>
+          <option value="Gestion">ING. EN GESTION EMPRESARIAL</option>
+          <option value="Quimica">ING. QUIMICA</option>
+          <option value="Sistemas">ING. EN SISTEMAS COMPUTACIONALES</option>
           </select>
+          <br /><br />
           
-          <label>Año:</label>
+          <label>Año:</label><br />
           <select name="opcion" id="opcion">
           <option value="2">1990</option>
           <option value="3">1991</option>
@@ -54,13 +55,12 @@
           <option value="24">2012</option>
           <option value="25">2013</option>
           </select>
-          </br> 
-          </br>  
-    <p align="center">     
-    <input type="submit" value="Buscar" class="buscar" name="consultar" >
-  </p>
-</form>
-</div>
-</body>
+          <br />  
+          <p align="center">     
+          <input type="submit" value="Buscar" class="buscar" name="consultar" >
+          </p>
+        </form>
+      </div>
+    </body>
 </html>
 @endsection

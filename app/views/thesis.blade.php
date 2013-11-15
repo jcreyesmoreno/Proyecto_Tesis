@@ -37,7 +37,12 @@
 			</tr>
 		@endfor
 		</table>
-		
+		<br />
+		<form action="/searchtesis"  method="get">
+			<p align="center">     
+    		<input type="submit" value="Regresar" class="regresar">
+  			</p>	
+  		</form>
 	</boby>
 	@else
 		<p>No se ha realizado ninguna consulta</p>	

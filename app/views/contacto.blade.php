@@ -8,19 +8,21 @@
 <div id="formulario">
 	<form id="contacto" name="contacto" action="" method="post">
 		<label>*Nombre:</label></br>
-		<input type="text" id="name" name="nombre" class="campo"></br>
+		<input type="text" id="name" name="nombre" class="campo" /></br>
 		<div id="mensaje1" class="errores">Escribe tu nombre</div>
 
 		<label>*Correo Electrónico:</label></br>
-		<input type="text" id="email" name="correo" class="campo"></br>
+		<input type="email" id="email" name="correo" class="campo" /></br>
 		<div id="mensaje2" class="errores">Escribe tu correo electronico</div>
 
 		<label>*Mensaje:</label></br>
-		<textarea id="tfmensaje" name="mensaje"></textarea></br>
+		<textarea id="tfmensaje" name="mensaje">
+		</textarea>
+		</br>
 		<div id="mensaje3" class="errores">Escribe tu mensaje</div>
 			
-		<input type="submit" id="envio" value="Enviar" class="buscar"name="b1">
-		<input type="reset" value="Borrar" class="buscar" name="b2">
+		<input type="submit" id="envio" value="Enviar" class="buscar"name="b1" />
+		<input type="reset" value="Borrar" class="buscar" name="b2"/>
 
 	</form>	
 </div>

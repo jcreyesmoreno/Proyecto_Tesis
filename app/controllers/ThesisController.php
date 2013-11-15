@@ -118,10 +118,10 @@ class ThesisController extends Controller{
 			$id = Input::get("id");
 			$delete = Thesis::where("id", "=", $id)->delete();
 			if($delete){
-				return ":D !!";	
+				return Redirect::to('/search');	
 			}else{
-				return ":( !!";
-			}
+				return Redirect::to('/search');
+			}	
 		}else{
 			return Redirect:: to("/");
 		}
