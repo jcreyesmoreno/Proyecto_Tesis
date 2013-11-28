@@ -16,6 +16,7 @@
 				<th class="num">N°</th>
 				<th class="tit">TITULO</th>
 				<th class="carr">CARRERA</th>
+				<th class="carr">AUTOR</th>
 				<th class="ind">INDICE</th>
 				<th class="prol">PROLOGO</th>
 				<th class="tes">TESIS</th>
@@ -25,6 +26,7 @@
 				<td class="view">{{ $i + 1 }}</td>
 				<td class="view">{{ $Thesis[$i]->title }}</td>
 				<td class="view">{{ $Thesis[$i]->career }}</td>
+				<td class="view">{{ $Thesis[$i]->author }}</td>
 				<td class="ver"><a href="/indice/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
 				<td class="ver"><a href="/prologo/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
 				<td class="ver"><a href="/tesis/pdf/{{ $Thesis[$i]->id }}">VER</a></td>

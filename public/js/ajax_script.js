@@ -1,8 +1,8 @@
-var expr = /^[a-zA-z0-9_\.\-]+@[a-zA-z0-9\-]+\.[a-zA-z0-9\-\.]+$/;
+var expr = /^[a-zA-z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 
 $(document).ready(function(){
 	$("#envio").click(function(){
-		var nombre = $("#name");.val();
+		var nombre = $("#name").val();
 		var correo = $("#email").val();
 		var mensaje = $("#tfmensaje").val();
 
@@ -14,7 +14,12 @@ $(document).ready(function(){
 			if(correo == "" || !expr.test(correo)){
 				$("#mensaje2").fadeIn();
 				return false;
-
+			}else{
+				$("#mensaje2").fadeOut();
+				if(asunto == ""){
+					$("#mensaje3").fadeIn();
+					return false;
+				}
 			}
 		}
 

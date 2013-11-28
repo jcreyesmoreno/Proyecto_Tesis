@@ -23,6 +23,7 @@
     <option value="Gestion">ING. EN GESTION EMPRESARIAL</option>
     <option value="Quimica">ING. QUIMICA</option>
     <option value="Sistemas">ING. EN SISTEMAS COMPUTACIONALES</option>
+    <option value="Administracion">LIC. EN ADMINISTRACION</option>
     </select>
     <br /><br />
           

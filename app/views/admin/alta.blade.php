@@ -15,7 +15,9 @@
           <input type="text" name="nombre" class="campo3" />
           <br />
 
-          <label>Autor:</label> <br />
+          <label>Autor(es):</label> <br />
+          <input type="text" name="autor" class="campo3">
+          <br />
           <input type="text" name="autor" class="campo3">
           <br /><br />
 
@@ -28,6 +30,7 @@
           <option value="Gestion">ING. EN GESTION EMPRESARIAL</option>
           <option value="Quimica">ING. QUIMICA</option>
           <option value="Sistemas">ING. EN SISTEMAS COMPUTACIONALES</option>
+          <option value="Administracion">LIC. EN ADMINISTRACION</option>
           </select><br /><br />
     
           <label>Año:</label><br />

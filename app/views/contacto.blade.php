@@ -6,7 +6,7 @@
 </head>
 <h4 align="center">TU OPINION NOS INTERESA, SI TUVISTE ALGUN PROBLEMA EN TU BUSQUEDA POR FAVOR ENVIANOS UN CORREO</h4>
 <div id="formulario">
-	<form id="contacto" name="contacto" action="" method="post">
+	<form id="contacto" name="contacto" action="/enviar" method="post">
 		<label>*Nombre:</label></br>
 		<input type="text" id="name" name="nombre" class="campo" /></br>
 		<div id="mensaje1" class="errores">Escribe tu nombre</div>
@@ -21,10 +21,12 @@
 		</br>
 		<div id="mensaje3" class="errores">Escribe tu mensaje</div>
 			
-		<input type="submit" id="envio" value="Enviar" class="buscar"name="b1" />
+		<input type="submit" id="envio" value="Enviar" class="buscar" name="b1" />
 		<input type="reset" value="Borrar" class="buscar" name="b2"/>
 
 	</form>	
 </div>
+
+
 
 @endsection

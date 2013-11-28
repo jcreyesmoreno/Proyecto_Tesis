@@ -28,7 +28,7 @@ class ThesisController extends Controller{
 			}
 
 			else if($career == "Gestion"){
-				$ruta = "../public/pdf/ADMINISTRACION/TA".$year;
+				$ruta = "../public/pdf/GESTION/TIGE".$year;
 				$prefijo  = "";
 			}
 
@@ -54,6 +54,11 @@ class ThesisController extends Controller{
 
 			else if($career == "Sistemas"){
 				$ruta = "../public/pdf/SISTEMAS/TISC".$year;
+				$prefijo  = "";
+			}
+
+			else if($career == "Administracion"){
+				$ruta = "../public/pdf/ADMINISTRACION/TA".$year;
 				$prefijo  = "";
 			}
 
@@ -103,6 +108,17 @@ class ThesisController extends Controller{
 		}else{
 			return "no se encontro la Tesis";
 		}
+	}
+
+	public function buscaTesis(){
+			$title = Input::get("nombre");
+			$author = Input::get("autor");
+			$career = Input::get("carrera");
+			$year = Input::get("year");
+
+			$search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
+			
+			return View::make('thesis')->with('Thesis', $search);
 	}
 
 	public function getTableTesis () {
