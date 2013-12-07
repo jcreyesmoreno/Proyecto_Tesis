@@ -11,7 +11,7 @@
 		<div class="table">
 		<h2 align="center">RESULTADOS DE LA BUSQUEDA</h2>
 		</div>
-		<table class="tabla">
+		<table class="tabla" cellspacing="2">
 			<tr>
 				<th class="num">N°</th>
 				<th class="tit">TITULO</th>
@@ -31,6 +31,9 @@
 				<td class="ver"><a href="/prologo/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
 				<td class="ver"><a href="/tesis/pdf/{{ $Thesis[$i]->id }}">VER</a></td>
 				<td class="del">
+
+					
+
 					<form action="/thesis/delete" method="POST">
 						<input type="hidden" name="id" value="{{ $Thesis[$i]->id }}">
 						<input type="submit" class="delete" value="Eliminar"> 

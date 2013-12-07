@@ -22,42 +22,42 @@ class ThesisController extends Controller{
 			$ruta = "";
 			$prefijo = "";
 
-			if($career == "Ambiental"){
+			if($career == "AMBIENTAL"){
 				$ruta = "../public/pdf/AMBIENTAL/TIA".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Gestion"){
+			else if($career == "GESTION"){
 				$ruta = "../public/pdf/GESTION/TIGE".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Electromecanica"){
+			else if($career == "ELECTROMECANICA"){
 				$ruta = "../public/pdf/ELECTROMECANICA/TIEM".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Electronica"){
+			else if($career == "ELECTRONICA"){
 				$ruta = "../public/pdf/ELECTRONICA/TIE".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Industrial"){
+			else if($career == "INDUSTRIAL"){
 				$ruta = "../public/pdf/INDUSTRIAL/TII".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Quimica"){
+			else if($career == "QUIMICA"){
 				$ruta = "../public/pdf/QUIMICA/TIQ".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Sistemas"){
+			else if($career == "SISTEMAS"){
 				$ruta = "../public/pdf/SISTEMAS/TISC".$year;
 				$prefijo  = "";
 			}
 
-			else if($career == "Administracion"){
+			else if($career == "ADMINISTRACION"){
 				$ruta = "../public/pdf/ADMINISTRACION/TA".$year;
 				$prefijo  = "";
 			}
@@ -95,31 +95,34 @@ class ThesisController extends Controller{
 	}
 
 	public function buscarTesis(){
-		if(Sentry::check()){
+        if(Sentry::check()){
+            $title = Input::get("nombre");
+            $author = Input::get("autor");
+            $career = Input::get("carrera");
+            $year = Input::get("year");
+
+            $search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
+                        
+            return View::make('thesis')->with('Thesis', $search);
+
+            }else{
+                return "no se encontro la Tesis";
+            }
+        }
+
+	public function searchTesis(){
 			$title = Input::get("nombre");
 			$author = Input::get("autor");
 			$career = Input::get("carrera");
 			$year = Input::get("year");
+			//return $title." ".$author." ".$career." ".$year;
 
 			$search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
 			
+			//return View::make('thesis')->with,array('Thesis'=>$search, 'user'=>Sentry::getUser());
 			return View::make('thesis')->with('Thesis', $search);
-
-		}else{
-			return "no se encontro la Tesis";
 		}
-	}
 
-	public function buscaTesis(){
-			$title = Input::get("nombre");
-			$author = Input::get("autor");
-			$career = Input::get("carrera");
-			$year = Input::get("year");
-
-			$search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
-			
-			return View::make('thesis')->with('Thesis', $search);
-	}
 
 	public function getTableTesis () {
 		if(Sentry::check()){
