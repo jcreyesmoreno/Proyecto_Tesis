@@ -12,7 +12,7 @@
 		<div id="mensaje1" class="errores">Escribe tu nombre</div>
 
 		<label>*Correo Electrónico:</label></br>
-		<input type="email" id="correo" name="mail" class="campo" /></br>
+		<input type="email" id="correo" name="email" class="campo" /></br>
 		<div id="mensaje2" class="errores">Escribe tu correo electronico</div>
 
 		<label>*Asunto:</label></br>

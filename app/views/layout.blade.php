@@ -12,21 +12,28 @@
 		   	</div>
 			<div class="titulo">
     		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
-    		<nav>
-			<ul id="mainmenu">
-				<li><a href="/">Home</a>
-				</li>
-				<li><a href="/admin">Administrador</a>
-				</li>
-				<li><a href="/search">Buscar tesis</a>
-				</li>
-				<li><a href="/contact">Contacto</a>
-				</li>	
-			</ul>	
-			</nav>
+    		
 			</div>
 		</header>
 		<article id="contenido">
+			<h3 align="center">BIENVENIDO PARA PODER CONTINUAR INGRESA TU USUARIO Y CONTRASEÑA</h3>
+			<br />
+			<div id="formulario1">
+        	<form action="/userAdmin"  method="post">
+    
+            <label>Usuario:</label><br />
+            <input type="text" name="correo" class="campo1" id="mail" />
+            <br />
+
+            <label>Contraseña:</label><br />
+            <input type="password" name="passwd" class="campo1" id="passw" />
+
+            <p align="center">
+			<input type="submit" name="entrar" class="buscar" value="Iniciar sesión" />
+			</p>
+            
+        </form>
+    </div>
 			@yield('content')
 		</article>
 	</div>	

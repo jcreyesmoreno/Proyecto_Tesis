@@ -18,7 +18,7 @@
 				</li>
 				<li><a href="/searchtesis">Buscar</a>
 				</li>	
-				<li><a href="">Cambiar contraseña</a>
+				<li><a href="/change">Cambiar contraseña</a>
 				</li>
 				<li><a href="/logout">Salir</a>
 				</li>	
