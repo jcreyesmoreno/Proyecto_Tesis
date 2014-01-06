@@ -1,34 +1,52 @@
 <html lang="es">
 	<head>
 	<meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	{{ HTML::style('css/style.css') }}
+	<meta name="viewport" content="width=device-width, initial-escale=1.0">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+	{{ HTML::style('dist/login.css') }}
 	</head>
-		<body>
+	<body>
 		<div class="container-main">
 			<header>
 	      	<div class="logo-derecho">
 			</div>
 			<div class="titulo">
     		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
-				<nav>
-					<ul id="mainmenu">
-					<li><a href="/newtesis">Nueva tesis</a>
-					</li>
-					<li><a href="/searchtesis">Buscar</a>
-					</li>
-					<li><a href="/deletetesis">Cambiar contraseña</a>
-					</li>	
-					<li><a href="/logout">salir</a>
-					</li>	
-					</ul>	
-				</nav>
+			<nav>
+			<ul id="mainmenu">
+				<li><a href="/newtesis">Nueva Tesis</a>
+				</li>
+				<li><a href="/searchtesis">Buscar y/o eliminar tesis</a>
+				</li>	
+				<li><a href="/logout">Salir</a>
+				</li>	
+				</ul>	
+			</nav>
 			</div>
-		</header>
-		<article id="contenido">
+			</header>
+			<article id="contenido">
+				<h3 align="center">BIENVENIDO ESTA ES LA SESION DE ADMINISTRADOR SELECCIONA QUE ACCION DESEAS REALIZAR</h3>
+				<br />
+
+				<div class="instruccion">
+				<dl>
+  					<dt>Nueva Tesis</dt>
+  					<dd>Agrega una nueva tesis llenando los campos con la información necesaria.</dd><br />
+  					<dt>Buscar y/o eliminar tesis</dt>
+  					<dd>Buscar una tesis por titulo, por autor, por carrera o por año.</dd>
+  					<br />
+  					<dt>salir</dt>
+  					<dd>Salir de la sesión de administrador.</dd>
+					</dl>
+				</div>
 			@yield('content')
-		</article>
+			</article>
+			</div>	
+			<div id="footer">
+				<p>Instituto Tecnológico de Minatitlán</p>
+				<p>Blvd. Institutos Tecnológicos S/N Col. Buena Vista Norte C.P. 96848</p>
+				<p>Telefono (922) 22 243 45 Minatitlán, Veracruz Llave</p>
+			
 		</div>	
 	</body>
 </html>

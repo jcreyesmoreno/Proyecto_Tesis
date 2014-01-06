@@ -1,0 +1,182 @@
+html{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+  	background-image: url("../images/fonfo2.jpg");
+}
+
+header{
+	background-image: url("../images/fonfo2.jpg");
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.title-p{
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    color: ;
+    font-size: 35px;
+    text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+
+
+  #contenido{
+  padding: 10px;
+  margin: 10px;
+  width: 1000px;
+  height: 750px;
+  margin-right: auto;
+  margin-left: auto;
+  border-color: #FFF;
+  border-style: solid;
+}
+
+/*.boxlogin{
+	border-radius: 4px;
+	background-image: url("../images/fonfo2.jpg");
+	margin: 10px auto;
+	width: 660px;
+	-webki-border-radius: 4px;
+	-moz-border-radius: 4px;
+
+}
+
+
+input[type="submit"]{
+	margin-top: 20px;
+  text-align: center;
+}
+*/
+.form-control{
+	width: 600px;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.form-group{
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-user{
+  font-size: 20px;
+  text-align: center;
+  padding: 50px;
+}
+
+
+
+nav{
+	font-size: 18;
+  	width: 1000px;
+  	margin: 20px auto;
+  	height: 40px;
+  	line-height: 30px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  
+}
+
+ul#mainmenu, ul#mainmenu ul{
+  	list-style: none;
+  	padding: 0 auto;
+  	text-align: center;
+}
+
+ul#mainmenu li{
+  	display: inline-block;
+  	text-align: center;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding: 5px 20px 15px 20px;
+  	position: relative;
+  	line-height: 18px;
+}
+
+ul#mainmenu li a{
+  	color: #000000;
+  	text-decoration: none;
+  	font-weight: bolder;
+}
+
+ul#mainmenu li a:hover{
+  	color: #003366;
+}
+
+.instruccion{
+    font-size: 20;
+    margin-left: 150px;
+}
+
+#footer{
+  	text-align: center;
+  	font-family: verdana;
+  	font-size: 12px;
+  	font-weight: bolder;
+  	padding-top: 15px;
+}
+
+
+
+.table{
+  	width: 98%;
+  	padding: 10px;
+  	margin: 10px;
+  	box-shadow: 10px 10px 5px #888888;
+  	border:1px solid #000000;
+  	-moz-border-radius-bottomleft:9px;
+  	-webkit-border-bottom-left-radius:9px;
+  	border-bottom-left-radius:9px;
+  	-moz-border-radius-bottomright:9px;
+  	-webkit-border-bottom-right-radius:9px;
+  	border-bottom-right-radius:9px;
+  	-moz-border-radius-topright:9px;
+  	-webkit-border-top-right-radius:9px;
+  	border-top-right-radius:9px;
+  	-moz-border-radius-topleft:9px;
+  	-webkit-border-top-left-radius:9px;
+  	border-top-left-radius:9px;
+}
+
+
+
+.num, .tit, .carr, .ind, .prol, .tes, .ver, .view{
+  	text-align: center;
+}
+
+.num{
+  width: 5%;
+}
+
+.tit{
+  width: 40%;
+}
+
+.carr, .ind, .prol, .tes, .ver .del{
+  width: 10%;
+}
+
+.ver a:link{
+  text-decoration: none;
+  color: blue;
+  font-weight:bold;
+}

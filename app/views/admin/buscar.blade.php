@@ -4,34 +4,34 @@
 <html lang="es">
   <head>
   <meta charset="utf-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-escale=1.0">
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+  {{ HTML::style('dist/login.css') }}
   </head>
     <body>
-    <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4>
-      <div id="formulario4">
+    <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4><br />
+      <div class="form-group">
         <form name="consulta" action="/search" method="post">
-        <label>Título:</label><br />
-        <input type="text" name="nombre" class="campo4">
-        <br />
-        <label>Autor:</label><br />
-        <input type="text" name="autor" class="campo4">
-        <br />
-          <label>Carrera:</label> <br />
-          <select name="carrera" id="opcion">
+        <label>Titulo</label>
+        <input type="text" class="form-control input-lg" name="nombre" id="titulo_tesis" placeholder="Introduce el titulo de la tesis">
+        <label>Autor</label>
+        <input type="text" class="form-control input-lg" name="autor" id="autor" placeholder="Introduce el nombre del autor">
+        <label>Carrera</label>
+
+        <select class="form-control input-lg" name="carrera">
           <option selected>--- Elige una carrera ---</option>
-          <option value="AMBIENTAL">ING. AMBIENTAL</option>
-          <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
-          <option value="ELECTRONICA">ING. ELECTRONICA</option>
-          <option value="INDUSTRIAL">ING. INDUSTRIAL</option>
-          <option value="GESTION">ING. EN GESTION EMPRESARIAL</option>
-          <option value="QUIMICA">ING. QUIMICA</option>
-          <option value="SISTEMAS">ING. EN SISTEMAS COMPUTACIONALES</option>
-          <option value="ADMINISTRACION">LIC. EN ADMINISTRACION</option>
-          </select>
-          <br /><br />
-          
-          <label>Año:</label><br />
-          <select name="year" id="opcion">
+          <option value="Ambiental">ING. AMBIENTAL</option>
+          <option value="Electromecanica">ING. ELECTROMECANICA</option>
+          <option value="Electronica">ING. ELECTRONICA</option>
+          <option value="Industrial">ING. INDUSTRIAL</option>
+          <option value="Gestion">ING. EN GESTION EMPRESARIAL</option>
+          <option value="Quimica">ING. QUIMICA</option>
+          <option value="Sistemas">ING. EN SISTEMAS COMPUTACIONALES</option>
+          <option value="Administracion">LIC. EN ADMINISTRACION</option>
+        </select>
+
+        <label>Año</label>
+        <select class="form-control input-lg" name="year">
           <option selected>--- Elige un año ---</option>
           <option value="1990">1990</option>
           <option value="1991">1991</option>
@@ -57,12 +57,13 @@
           <option value="2011">2011</option>
           <option value="2012">2012</option>
           <option value="2013">2013</option>
-          </select>
-          <br />  
-          <p align="center">     
-          <input type="submit" value="Buscar" class="buscar" name="consultar" >
-          </p>
-        </form>
+        </select>
+        <br />
+      <!--<input type="submit" class="btn btn-success btn-lg" name="entrar"  value="Buscar">-->
+      
+        <button type="text" class="btn btn-success btn-lg" name="entrar"> 
+          <span class="glyphicon glyphicon-search"></span> Buscar
+        </button>
       </div>
     </body>
 </html>

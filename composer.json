@@ -4,15 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"php": ">=5.3.0",
-        "another-vendor/package": "1.*",
 		"laravel/framework": "4.0.*",
-		"cartalyst/sentry": "2.0.*",
-		"vendor/package": "1.3.2",
-        "vendor/package2": "1.*",
-        "vendor/package3": ">=2.0.3"
-        "faisalman/simple-excel-php" : "0.3.*"
-
+		"cartalyst/sentry": "2.0.*"
 	},
 	"autoload": {
 		"classmap": [

@@ -16,10 +16,8 @@
 			<ul id="mainmenu">
 				<li><a href="/newtesis">Nueva tesis</a>
 				</li>
-				<li><a href="/searchtesis">Buscar</a>
+				<li><a href="/searchtesis">Buscar y/o eliminar tesis</a>
 				</li>	
-				<li><a href="/change">Cambiar contraseña</a>
-				</li>
 				<li><a href="/logout">Salir</a>
 				</li>	
 			</ul>	
