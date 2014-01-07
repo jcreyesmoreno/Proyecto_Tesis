@@ -3,15 +3,16 @@
 	class UserController extends Controller{
 
 	public function registrerUser(){	
-	$user = Sentry::register(array(
-        'email'    => 'wolverine1401@gmail.com',
-        'password' => 'root',
-    ));	
+		$user = Sentry::register(array(
+	        'email'    => 'wolverine1401@itmina.com.mx',
+	        'password' => 'root',
+	    ));	
 	}
+
 	public function loginUser(){
 		
 			try{
-				$email = Input::get("correo");
+				$number = Input::get("number");
 				$password = Input::get("passwd");
 
 		    	// Set login credentials
@@ -44,7 +45,6 @@
 			catch (Cartalyst\Sentry\Users\UserNotActivatedException $e){
 			echo 'User is not activated.';
 			}
-
 	}
 
 	public function getViewAdmin(){
@@ -69,6 +69,37 @@
 		}		
 	}
 
-}
+	public function addUserExcel () {
+
+		$nombre_fichero = '../app/alumnos.xls';
+
+		if (file_exists($nombre_fichero)) {
+		  $Array = Excel::load($nombre_fichero)->calculate()->toArray();
+		  // return $Array 
+		  $List = $Array['Hoja1'];
+		  for ($i = 1; $i <  count($List); $i++) {
+
+		  	try{
+
+		  	  $user = Sentry::register(array(
+	        	'email'    => $List[$i]['1'].'@itmina.com.mx',
+	        	'password' => $List[$i]['2'],
+	        	'first_name' => $List[$i]['5'], 
+	        	'last_name' => $List[$i]['3'].' '.$List[$i]['4']
+			    ));
+
+	    		$activationCode = $user->getActivationCode();
+	    		$user->attemptActivation($activationCode);
+
+			  }catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
+			  }catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e){
+			  }catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
+		    }catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
+				}catch (Cartalyst\Sentry\Users\UserExistsException $e){}
+
+		}else{
+			return "el archivo no existe";
+		}
+	}
 
 ?>

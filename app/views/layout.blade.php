@@ -20,7 +20,7 @@
 		<div class="form-user">	
 			<form action="/userAdmin" method="post" name="flogin" id="flogin">
 				<label>Numero de control</label>
-				<input type="text" name="correo" id="correo" class="form-control input-lg" placeholder="Introduce tu numero de control"> 
+				<input type="text" name="number" id="correo" class="form-control input-lg" placeholder="Introduce tu numero de control"> 
 				<br />
 				<label>Contraseña</label>
 				<input type="password" name="passwd" id="passwd" class="form-control input-lg" placeholder="Contraseña"> 
