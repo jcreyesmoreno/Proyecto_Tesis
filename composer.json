@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.0.*",
-		"cartalyst/sentry": "2.0.*"
+		"cartalyst/sentry": "2.0.*",
+		"maatwebsite/excel": "dev-master"
+
 	},
 	"autoload": {
 		"classmap": [
@@ -34,7 +36,7 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }
 
 

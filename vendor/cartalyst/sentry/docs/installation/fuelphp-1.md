@@ -20,13 +20,12 @@ You must put the following in `app/bootstrap.php` below `Autoloader::register()`
 	// Enable composer based autoloading
 	require APPPATH.'vendor/autoload.php';
 
-
 Great! You now have composer working with FuelPHP.
 
 Just one more step is involved now, right at the bottom of that same file, `app/bootstrap.php`, put the following:
 
 	class_alias('Cartalyst\Sentry\Facades\FuelPHP\Sentry', 'Sentry');
 
-This will mean you can use the FuelPHP Sentry facade as the class `Sentry`. Vòila! Sentry automatically works with your current database configuration, there is no further setup required.
+This will mean you can use the FuelPHP Sentry facade as the class `Sentry`. Voilà! Sentry automatically works with your current database configuration, there is no further setup required.
 
 > **Note**: Sentry will always run off the default database connection, so ensure this is working. We may look at adding support for alternate connections in the future however it is not implemented at this stage. Pull requests are welcome.

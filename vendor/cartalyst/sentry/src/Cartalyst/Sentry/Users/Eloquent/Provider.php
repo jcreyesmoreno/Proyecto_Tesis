@@ -156,6 +156,17 @@ class Provider implements ProviderInterface {
 
 				throw new UserNotFoundException($message);
 			}
+			else if ($credential == $passwordName)
+			{
+				if (method_exists($this->hasher, 'needsRehashed') && 
+					$this->hasher->needsRehashed($user->{$credential}))
+				{
+					// The algorithm used to create the hash is outdated and insecure.
+					// Rehash the password and save.
+					$user->{$credential} = $value;
+					$user->save();
+				}
+			}
 		}
 
 		return $user;
@@ -238,7 +249,7 @@ class Provider implements ProviderInterface {
 	 * @param  \Cartalyst\Sentry\Groups\GroupInterface  $group
 	 * @return array
 	 */
-	public function findAllInGroup($group)
+	public function findAllInGroup(GroupInterface $group)
 	{
 		return $group->users()->get();
 	}

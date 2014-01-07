@@ -4,27 +4,32 @@
 
 	public function registrerUser(){	
 		$user = Sentry::register(array(
-	        'email'    => 'wolverine1401@itmina.com.mx',
-	        'password' => 'root',
-	    ));	
+	    'email'    => 'wolverine1401@itmina.com.mx',
+	    'password' => 'root',
+	    'permissions' => array('admin');
+	  ));	
 	}
 
 	public function loginUser(){
 		
-			try{
-				$number = Input::get("number");
-				$password = Input::get("passwd");
+		try{
+			$number = Input::get("number");
+			$password = Input::get("passwd");
 
-		    	// Set login credentials
-		    	$credentials = array(
-		        'email'    => $email,
-		        'password' => $password
-		    	);
+	    	// Set login credentials
+	    	$credentials = array(
+	        'email'    => $number.'@itmina.com.mx',
+	        'password' => $password
+	    	);
 
-		    	// Try to authenticate the user
-		   		$user = Sentry::authenticate($credentials, false);
+	    	// Try to authenticate the user
+	   		$user = Sentry::authenticate($credentials, false);
 
-		   		return Redirect::to('/user');
+	   		if($user->hasAccess('admin')){
+	   			Redirect::to('/admin');
+	   		}else{
+	   			Redirect::to('/buscar');
+	   		}
 			
 			}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
 				echo 'su E-mail es requerido.';
@@ -70,7 +75,6 @@
 	}
 
 	public function addUserExcel () {
-
 		$nombre_fichero = '../app/alumnos.xls';
 
 		if (file_exists($nombre_fichero)) {
@@ -83,13 +87,18 @@
 
 		  	  $user = Sentry::register(array(
 	        	'email'    => $List[$i]['1'].'@itmina.com.mx',
-	        	'password' => $List[$i]['2'],
-	        	'first_name' => $List[$i]['5'], 
-	        	'last_name' => $List[$i]['3'].' '.$List[$i]['4']
+	        	'password' => $List[$i]['2'].'',
+	        	'first_name' => $List[$i]['5'].'', 
+	        	'last_name' => $List[$i]['3'].' '.$List[$i]['4'],
+	        	'permissions' => array('user');
 			    ));
 
-	    		$activationCode = $user->getActivationCode();
-	    		$user->attemptActivation($activationCode);
+			    $User= Sentry::findUserById($user->id);
+
+	    		$activationCode = $User->getActivationCode();
+	    		$User->attemptActivation($activationCode);
+
+	    		print "Usuario: ".$i;
 
 			  }catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
 			  }catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e){
@@ -97,9 +106,14 @@
 		    }catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
 				}catch (Cartalyst\Sentry\Users\UserExistsException $e){}
 
+			}
+
+			return "Fin";
+
 		}else{
 			return "el archivo no existe";
 		}
 	}
+}
 
 ?>

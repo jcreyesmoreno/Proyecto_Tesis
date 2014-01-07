@@ -244,19 +244,6 @@ class Group extends \ORM implements GroupInterface {
 	}
 
 	/**
-	 * Saves the group.
-	 *
-	 * @param \Validation $validation
-	 * @return bool
-	 */
-	public function save(\Validation $validation = NULL)
-	{
-		$this->validate();
-
-		return parent::save($validation);
-	}
-
-	/**
 	 * Delete the group.
 	 *
 	 * @return bool
@@ -309,7 +296,7 @@ class Group extends \ORM implements GroupInterface {
 		// Merge permissions
 		$permissions = array_merge($this->getPermissions(), $permissions);
 
-		// Loop through and adjsut permissions as needed
+		// Loop through and adjust permissions as needed
 		foreach ($permissions as $permission => &$value)
 		{
 			// Lets make sure their is a valid permission value

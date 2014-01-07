@@ -16,6 +16,9 @@ Route::get('/', function()
     return View::make('home');
 });
 
+// Route de Lectura de XLS
+Route::get('/feo', 'UserController@addUserExcel');
+
 Route::get('/search', function()
 {
         return View::make('buscar');
@@ -56,28 +59,11 @@ Route::get('/admin', 'UserController@getAdmin');
 
 Route::post('/adminalta', 'UserController@getThesis');
 
-// Route de Lectura de XLS
-Route::post('/readerxls', 'UserController@addUserExcel');
 
 //Metodo de POST del formulario para agregar una
 //tesis  nueva
 Route::post('/thesis', 'ThesisController@agregarTesis');
 Route::post('/thesis/delete', 'ThesisController@deleteTesis');
-
-//Muestra la tabla de tesis
-//Route::get('/thesis', 'ThesisController@getTableTesis');
-
-
-Route::get('/test', function () {
-
-         $user = Sentry::createUser(array(
-        'email'    => 'wolverine1401@gmail.com',
-        'password' => 'root',
-    ));
-
-         return "usuario creado";
-
-});
 
 //metodo para buscar una tesis
 
@@ -85,37 +71,39 @@ Route::post('/search', 'ThesisController@buscarTesis');
 
 
 Route::get('/indice/pdf/{id}', function ($id) {
-
-        $Thesi = Thesis::find($id);
-        if (file_exists($Thesi->index)) {
-            $content = file_get_contents($Thesi->index);            
-            return Response::make($content, 200, array('content-type'=>'application/pdf'));
-        }else{
-                return "Error Archivo Encontrado";
-        }
+  $Thesi = Thesis::find($id);
+  if (file_exists($Thesi->index)) {
+    $content = file_get_contents($Thesi->index);            
+    return Response::make($content, 200, array('content-type'=>'application/pdf'));
+  }else{
+    return "Error Archivo Encontrado";
+  }
 });
 
 Route::get('/prologo/pdf/{id}', function ($id) {
-
-        $Thesi = Thesis::find($id);
-        if (file_exists($Thesi->prologue)) {
-            $content = file_get_contents($Thesi->prologue);            
-            return Response::make($content, 200, array('content-type'=>'application/pdf'));
-        }else{
-                return "Error Archivo Encontrado";
-        }
+  $Thesi = Thesis::find($id);
+  if (file_exists($Thesi->prologue)) {
+    $content = file_get_contents($Thesi->prologue);            
+    return Response::make($content, 200, array('content-type'=>'application/pdf'));
+  }else{
+        return "Error Archivo Encontrado";
+  }
 });
 
 Route::get('/tesis/pdf/{id}', function ($id) {
-        $Thesi = Thesis::find($id);
-        if (file_exists($Thesi->thesis)) {
-            $content = file_get_contents($Thesi->thesis);            
-            return Response::make($content, 200, array('content-type'=>'application/pdf'));
-        }else{
-                return "Error Archivo Encontrado";
-        }
+  $Thesi = Thesis::find($id);
+  if (file_exists($Thesi->thesis)) {
+    $content = file_get_contents($Thesi->thesis);            
+    return Response::make($content, 200, array('content-type'=>'application/pdf'));
+  }else{
+    return "Error Archivo Encontrado";
+  }
 });
 
 
 Route::post('/search', 'ThesisController@searchTesis');
+
+
+
+?>
 
