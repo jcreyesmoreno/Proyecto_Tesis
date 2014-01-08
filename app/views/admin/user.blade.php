@@ -1,17 +1,14 @@
-<html lang="es">
-	<head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-escale=1.0">
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
 	{{ HTML::style('dist/login.css') }}
-	</head>
-	<body>
 		<div class="container-main">
 			<header>
 	      	<div class="logo-derecho">
 			</div>
 			<div class="titulo">
-    		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
+    		<img src="../images/barra_tec.JPG" />
 			<nav>
 			<ul id="mainmenu">
 				<li><a href="/newtesis">Nueva Tesis</a>
@@ -48,6 +45,4 @@
 				<p>Telefono (922) 22 243 45 Minatitlán, Veracruz Llave</p>
 			
 		</div>	
-	</body>
-</html>
 

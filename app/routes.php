@@ -13,45 +13,53 @@
 
 Route::get('/', function()
 {
-    return View::make('home');
+    return View::make('user');
 });
 
 // Route de Lectura de XLS
-Route::get('/feo', 'UserController@addUserExcel');
+Route::get('/usuarios', 'UserController@addUserExcel');
+
+Route::get('/administrador', 'UserController@registerUser');
 
 Route::get('/search', function()
 {
-        return View::make('buscar');
-});
-
-Route::get('/contact', function()
-{
-        return View::make('contacto');
-});
-
-Route::get('/about', function()
-{
-        return View::make('about');
+  if(Sentry::check()){
+    return View::make('buscar');
+  }else{
+      return Redirect::to('/user');
+  }
 });
 
 Route::get('/newtesis', function()
 {
-        return View::make('admin.alta');
-});
+  if(Sentry::check()){
+      return View::make('admin.alta');
+    }else{
+      return Redirect::to('/user');
+    }
+  });
 
 Route::get('/deletetesis', function()
 {
-        return View::make('admin.eliminar');
+  if(Sentry::check()){
+      return View::make('admin.buscar');
+    }else{
+      return Redirect::to('/user');
+    }
 });
 
 Route::get('/searchtesis', function()
 {
-        return View::make('admin.buscar');
+  if(Sentry::check()){
+      return View::make('admin.buscar');
+    }else{
+      return Redirect::to('/user');
+    }
 });
 
 Route::get('/logout', 'UserController@getExit');
 
-Route::post('/userAdmin', 'UserController@loginUser');
+Route::post('/login', 'UserController@loginUser');
 
 Route::get('/user', 'UserController@getViewAdmin');
 
@@ -99,11 +107,6 @@ Route::get('/tesis/pdf/{id}', function ($id) {
     return "Error Archivo Encontrado";
   }
 });
-
-
-Route::post('/search', 'ThesisController@searchTesis');
-
-
 
 ?>
 

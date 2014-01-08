@@ -1,13 +1,16 @@
-<section>
-	@if(isset($Thesis))
-<html lang="es">
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-escale=1.0">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
   {{ HTML::style('dist/login.css') }}
-	</head>
-	<body>
+<section>
+	@if(isset($Mensaje))
+    <div class="alert alert-success alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert">&times;
+    </button>
+    <strong>¡Listo!</strong> La tesis ha sido eliminada correctamente.
+    </div>
+    @endif
+	@if(isset($Thesis))
 		<div class="table">
 		<h2 align="center">RESULTADOS DE LA BUSQUEDA</h2>
 		</div>
@@ -57,7 +60,6 @@
             <span class="glyphicon glyphicon-circle-arrow-left"></span> Regresar
           </button>	</p>
   		</form>
-	</boby>
 	@else
 		<p>No se ha realizado ninguna consulta</p>	
 	@endif

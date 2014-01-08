@@ -1,14 +1,10 @@
 @extends('layout_admin')
 
 @section('content')
-<html lang="es">
-  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
   {{ HTML::style('dist/login.css') }}
-  </head>
-    <body>
     <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4><br />
       <div class="form-group">
         <form name="consulta" action="/search" method="post">
@@ -18,17 +14,17 @@
         <input type="text" class="form-control input-lg" name="autor" id="autor" placeholder="Introduce el nombre del autor">
         <label>Carrera</label>
 
-        <select class="form-control input-lg" name="carrera">
-          <option selected>--- Elige una carrera ---</option>
-          <option value="Ambiental">ING. AMBIENTAL</option>
-          <option value="Electromecanica">ING. ELECTROMECANICA</option>
-          <option value="Electronica">ING. ELECTRONICA</option>
-          <option value="Industrial">ING. INDUSTRIAL</option>
-          <option value="Gestion">ING. EN GESTION EMPRESARIAL</option>
-          <option value="Quimica">ING. QUIMICA</option>
-          <option value="Sistemas">ING. EN SISTEMAS COMPUTACIONALES</option>
-          <option value="Administracion">LIC. EN ADMINISTRACION</option>
-        </select>
+      <select class="form-control input-lg" name="carrera">
+      <option selected>--- Elige una carrera ---</option>
+      <option value="AMBIENTAL">ING. AMBIENTAL</option>
+      <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
+      <option value="ELECTRONICA">ING. ELECTRONICA</option>
+      <option value="INIDUSTRIAL">ING. INDUSTRIAL</option>
+      <option value="GESTION">ING. EN GESTION EMPRESARIAL</option>
+      <option value="QUIMICA">ING. QUIMICA</option>
+      <option value="SISTEMAS">ING. EN SISTEMAS COMPUTACIONALES</option>
+      <option value="ADMINISTRACION">LIC. EN ADMINISTRACION</option>
+      </select>
 
         <label>Año</label>
         <select class="form-control input-lg" name="year">
@@ -65,6 +61,4 @@
           <span class="glyphicon glyphicon-search"></span> Buscar
         </button>
       </div>
-    </body>
-</html>
 @endsection

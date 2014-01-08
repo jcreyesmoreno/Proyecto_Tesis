@@ -83,7 +83,7 @@ class ThesisController extends Controller{
                         $ModelThesis->thesis = $ruta.'/'.$tesis;
 
                         if($ModelThesis->save()){
-                                return "Tesis Guardada";
+                                return Redirect::to('/newtesis')->with('Mensaje', 'Listo' );
                         }else{
                                 return "Error al Guardar la Tesis";
                         }
@@ -110,19 +110,6 @@ class ThesisController extends Controller{
             }
         }
 
-        public function searchTesis(){
-                        $title = Input::get("nombre");
-                        $author = Input::get("autor");
-                        $career = Input::get("carrera");
-                        $year = Input::get("year");
-                        //return $title." ".$author." ".$career." ".$year;
-
-                        $search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
-                        
-                        //return View::make('thesis')->with,array('Thesis'=>$search, 'user'=>Sentry::getUser());
-                        return View::make('thesis')->with('Thesis', $search);
-                }
-
 
         public function getTableTesis () {
                 if(Sentry::check()){
@@ -137,9 +124,9 @@ class ThesisController extends Controller{
                         $id = Input::get("id");
                         $delete = Thesis::where("id", "=", $id)->delete();
                         if($delete){
-                                return Redirect::to('/search');        
+                                return Redirect::to('/searchtesis');        
                         }else{
-                                return Redirect::to('/search');
+                                return Redirect::to('/searchtesis');
                         }        
                 }else{
                         return Redirect:: to("/");

@@ -2,15 +2,19 @@
 
 	class UserController extends Controller{
 
-	public function registrerUser(){	
+	public function registerUser(){	
 		$user = Sentry::register(array(
 	    'email'    => 'wolverine1401@itmina.com.mx',
 	    'password' => 'root',
-	    'permissions' => array('admin');
-	  ));	
+	    'activated' => true,
+	    'permissions' => array('admin' => 1)
+	  ));
 	}
 
 	public function loginUser(){
+
+		$number = Input::get("number");
+		$password = Input::get("passwd");
 		
 		try{
 			$number = Input::get("number");
@@ -24,36 +28,44 @@
 
 	    	// Try to authenticate the user
 	   		$user = Sentry::authenticate($credentials, false);
+	   		Sentry::login($user, false);
 
-	   		if($user->hasAccess('admin')){
-	   			Redirect::to('/admin');
-	   		}else{
-	   			Redirect::to('/buscar');
+   			if($user->hasAccess('admin')){
+   				return Redirect::to('/admin');
 	   		}
-			
-			}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
-				echo 'su E-mail es requerido.';
-			}
+	   		else if($user->hasAccess('user')){
+   				return Redirect::to('/search');
+   			}else{
+	   			return Redirect::to('/')->with('Mensaje', 'Listo' );
+	   		}
+	
+		}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
+			//echo 'su E-mail es requerido.';
+			return Redirect::to('/')->with('Mensaje', 'Listo' );
+		}
 
-			catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
-				echo 'su contraseña es requerida.';
-			}
+		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
+			//echo 'su contraseña es requerida.';
+			return Redirect::to('/')->with('Mensaje', 'Listo' );
+		}
 
-			catch (Cartalyst\Sentry\Users\WrongPasswordException $e){
-				echo 'contraseña incorrecta, intente de nuevo.';
-			}
+		catch (Cartalyst\Sentry\Users\WrongPasswordException $e){
+			//echo 'contraseña incorrecta, intente de nuevo.';
+			return Redirect::to('/')->with('Mensaje', 'Listo' );
+		}
 
-			catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
-				echo 'usuario no encontrado.';
-			}
+		catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
+			//echo 'usuario no encontrado.';
+			return Redirect::to('/')->with('Mensaje', 'Listo' );
+		}
 
-			catch (Cartalyst\Sentry\Users\UserNotActivatedException $e){
-			echo 'User is not activated.';
-			}
+		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e){
+			//echo 'User is not activated.';
+			return Redirect::to('/')->with('Mensaje', 'Listo' );
+		}
 	}
 
 	public function getViewAdmin(){
-		
 		if(Sentry::check()){
 			return View::make('admin.user');
 		}else{
@@ -68,9 +80,9 @@
 
 	public function getAdmin(){
 		if(Sentry::check()){
-			return Redirect::to('/user');
+			return View::make('admin.user');
 		}else{
-			return View::make('admin.admin');
+			return Redirect::to('/');		
 		}		
 	}
 
@@ -90,15 +102,9 @@
 	        	'password' => $List[$i]['2'].'',
 	        	'first_name' => $List[$i]['5'].'', 
 	        	'last_name' => $List[$i]['3'].' '.$List[$i]['4'],
-	        	'permissions' => array('user');
+	        	'activated' => true,
+	        	'permissions' => array('admin' => 1)
 			    ));
-
-			    $User= Sentry::findUserById($user->id);
-
-	    		$activationCode = $User->getActivationCode();
-	    		$User->attemptActivation($activationCode);
-
-	    		print "Usuario: ".$i;
 
 			  }catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
 			  }catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e){

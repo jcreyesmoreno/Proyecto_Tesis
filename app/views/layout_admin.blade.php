@@ -2,7 +2,9 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  	<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">	
 	{{ HTML::style('css/style.css') }}
 </head>
 <body>
@@ -11,7 +13,7 @@
 	      <div class="logo-derecho">
 				</div>
 			<div class="titulo">
-    		<h2 align="center" class="title-p">SISTEMA DE BUSQUEDA Y CONSULTA DE TESIS ONLINE</h2>	
+    		<img src="../images/barra_tec.JPG" />
 		<nav>
 			<ul id="mainmenu">
 				<li><a href="/newtesis">Nueva tesis</a>
