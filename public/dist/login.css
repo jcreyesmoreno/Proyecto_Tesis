@@ -59,7 +59,7 @@ input[type="submit"]{
 	width: 600px;
   margin: auto;
   text-align: center;
-  
+  text-transform: uppercase;  
 }
 
 .form-group{

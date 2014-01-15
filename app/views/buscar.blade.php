@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_user')
 
 @section('content')
   <meta charset="utf-8">
