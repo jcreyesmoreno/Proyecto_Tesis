@@ -4,7 +4,8 @@
 
 	public function registerUser(){	
 		$user = Sentry::register(array(
-	    'email'    => 'wolverine1401@itmina.com.mx',
+	    //'email'    => 'wolverine1401@itmina.com.mx',
+	    'email'    => 'root@itmina.com.mx',
 	    'password' => 'root',
 	    'activated' => true,
 	    'permissions' => array('admin' => 1)
@@ -36,32 +37,32 @@
 	   		else if($user->hasAccess('user')){
    				return Redirect::to('/search');
    			}else{
-	   			return Redirect::to('/')->with('Mensaje', 'Listo' );
+	   			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 	   		}
 	
 		}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
 			//echo 'su E-mail es requerido.';
-			return Redirect::to('/')->with('Mensaje', 'Listo' );
+			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 		}
 
 		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
 			//echo 'su contraseña es requerida.';
-			return Redirect::to('/')->with('Mensaje', 'Listo' );
+			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 		}
 
 		catch (Cartalyst\Sentry\Users\WrongPasswordException $e){
 			//echo 'contraseña incorrecta, intente de nuevo.';
-			return Redirect::to('/')->with('Mensaje', 'Listo' );
+			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 		}
 
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
 			//echo 'usuario no encontrado.';
-			return Redirect::to('/')->with('Mensaje', 'Listo' );
+			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 		}
 
 		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e){
 			//echo 'User is not activated.';
-			return Redirect::to('/')->with('Mensaje', 'Listo' );
+			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
 		}
 	}
 

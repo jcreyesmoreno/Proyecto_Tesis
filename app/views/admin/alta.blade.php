@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
   {{ HTML::style('dist/login.css') }}
-    @if(isset($Mensaje))
-    <div class="alert alert-success alert-dismissable">
-    <button type="button" class="close" data-dismiss="alert">&times;
-    </button>
-    <strong>¡Listo!</strong> La tesis ha sido guardada correctamente.
-    </div>
+    @if(isset($Message))
+      <div class="alert alert-success alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert">&times;
+      </button>
+      <strong>¡Listo!</strong> La tesis ha sido guardada correctamente.
+      </div>
     @endif
     <h4 align="center">INGRESA LOS DATOS DE LA NUEVA TESIS</h4> <br />
     <div class="form-group">
       <form enctype="multipart/form-data" action="/thesis" method="post">
       <label>Titulo</label>
-      <input type="text" class="form-control input-lg" name="nombre" id="titulo_tesis" placeholder="Introduce el titulo de la tesis">
+      <input type="text" class="form-control input-lg" name="nombre" id="titulo_tesis" required="required" placeholder="Introduce el titulo de la tesis">
       
       <label>Autor</label>
-      <input type="text" class="form-control input-lg" name="autor" id="autor" placeholder="Introduce el nombre del autor">
+      <input type="text" class="form-control input-lg" name="autor" id="autor" required="required" placeholder="Introduce el nombre del autor">
     
     <label>Carrera</label>
-    <select class="form-control input-lg" name="carrera">
+    <select class="form-control input-lg" name="carrera" required="required">
       <option selected>--- Elige una carrera ---</option>
       <option value="AMBIENTAL">ING. AMBIENTAL</option>
       <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
@@ -34,7 +34,7 @@
       <option value="ADMINISTRACION">LIC. EN ADMINISTRACION</option>
     </select>
     <label>Año</label>
-      <select class="form-control input-lg" name="year">
+      <select class="form-control input-lg" name="year" required="required">
         <option selected>--- Elige un año ---</option>
         <option value="1990">1990</option>
         <option value="1991">1991</option>
@@ -65,15 +65,15 @@
 
         <br />
         <label>Seleccionar Indice(PDF)
-        <input type="file" id="Seleccionar Indice" name="indice"></label>
+        <input type="file" id="Seleccionar Indice" name="indice" required="required"></label>
         <br />
         <br />
         <label>Seleccionar Prorrogo(PDF)
-        <input type="file" id="Seleccionar Prologo" name="prologo"></label>
+        <input type="file" id="Seleccionar Prologo" name="prologo" required="required"></label>
         <br />
         <br />
         <label>Seleccionar Tesis(PDF)
-        <input type="file" id="Seleccionar Tesis" name="tesis"></label>
+        <input type="file" id="Seleccionar Tesis" name="tesis" required="required"></label>
         <br />
         <br />
         <button type="text" class="btn btn-success btn-lg" name="entrar">  
