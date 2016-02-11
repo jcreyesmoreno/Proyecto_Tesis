@@ -20,6 +20,8 @@
 				</li>
 				<li><a href="/searchtesis">Buscar y/o eliminar tesis</a>
 				</li>	
+				<li><a href="/update">Actualizar Alumnos</a>
+				</li>	
 				<li><a href="/logout">Salir</a>
 				</li>	
 			</ul>	

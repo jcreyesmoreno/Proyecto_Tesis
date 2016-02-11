@@ -56,6 +56,7 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'base_datos',
+			//'database'  => 'temporal',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',

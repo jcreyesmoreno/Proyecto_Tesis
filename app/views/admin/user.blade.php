@@ -15,6 +15,8 @@
 				</li>
 				<li><a href="/searchtesis">Buscar y/o eliminar tesis</a>
 				</li>	
+				<li><a href="/update">Actualizar Alumnos</a>
+				</li>	
 				<li><a href="/logout">Salir</a>
 				</li>	
 				</ul>	
@@ -31,6 +33,9 @@
   					<dd>Agrega una nueva tesis llenando los campos con la información necesaria.</dd><br />
   					<dt>Buscar y/o eliminar tesis</dt>
   					<dd>Buscar una tesis por titulo, por autor, por carrera o por año.</dd>
+  					<br />
+  					<dt>Actualizar Alumnos</dt>
+  					<dd>Actualiza la base de datos de los alumnos con acceso al sistema</dd>
   					<br />
   					<dt>salir</dt>
   					<dd>Salir de la sesión de administrador.</dd>

@@ -5,8 +5,8 @@
 	public function registerUser(){	
 		$user = Sentry::register(array(
 	    //'email'    => 'wolverine1401@itmina.com.mx',
-	    'email'    => 'root@itmina.com.mx',
-	    'password' => 'root',
+	    'email'    => 'admin2014@itmina.com.mx',
+	    'password' => 'admin123',
 	    'activated' => true,
 	    'permissions' => array('admin' => 1)
 	  ));
@@ -31,13 +31,13 @@
 	   		$user = Sentry::authenticate($credentials, false);
 	   		Sentry::login($user, false);
 
-   			if($user->hasAccess('admin')){
+   			if($user->hasAccess('admin')){   				
    				return Redirect::to('/admin');
 	   		}
 	   		else if($user->hasAccess('user')){
    				return Redirect::to('/search');
    			}else{
-	   			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+	   			return Redirect::to('/')->with(array('Message' => 'Usuario y/o Contraseña Incorrectos'));
 	   		}
 	
 		}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
@@ -104,7 +104,7 @@
 	        	'first_name' => $List[$i]['5'].'', 
 	        	'last_name' => $List[$i]['3'].' '.$List[$i]['4'],
 	        	'activated' => true,
-	        	'permissions' => array('admin' => 1)
+	        	'permissions' => array('user' => 1)
 			    ));
 
 			  }catch (Cartalyst\Sentry\Users\UserNotFoundException $e){

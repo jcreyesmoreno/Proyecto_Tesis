@@ -57,6 +57,15 @@ Route::get('/searchtesis', function()
     }
 });
 
+Route::get('/update', function()
+{
+  if(Sentry::check()){
+      return View::make('admin.update');
+    }else{
+      return Redirect::to('/user');
+    }
+});
+
 Route::get('/logout', 'UserController@getExit');
 
 Route::post('/login', 'UserController@loginUser');
@@ -108,5 +117,7 @@ Route::get('/tesis/pdf/{id}', function ($id) {
   }
 });
 
+//--------------rutas de excel--------------------//
+Route::post('/update_excel', 'ExcelController@saveExcel');
 ?>
 
