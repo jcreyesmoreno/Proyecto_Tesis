@@ -68,7 +68,7 @@
         <input type="file" id="Seleccionar Indice" name="indice" required="required"></label>
         <br />
         <br />
-        <label>Seleccionar Prorrogo(PDF)
+        <label>Seleccionar Prólogo(PDF)
         <input type="file" id="Seleccionar Prologo" name="prologo" required="required"></label>
         <br />
         <br />

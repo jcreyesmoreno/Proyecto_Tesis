@@ -5,7 +5,7 @@
 	<br />
 	<div class="form-user">
 		@if(isset($Message))
-			<div class="alert alert-success">
+			<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
 				<strong>¡Algo anda mal!</strong> el usuario o contraseña es incorrecto.				
 			</div>

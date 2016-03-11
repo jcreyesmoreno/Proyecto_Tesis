@@ -37,32 +37,40 @@
 	   		else if($user->hasAccess('user')){
    				return Redirect::to('/search');
    			}else{
-	   			return Redirect::to('/')->with(array('Message' => 'Usuario y/o Contraseña Incorrectos'));
+	   			//return Redirect::to('/')->with(array('Message' => 'Usuario y/o Contraseña Incorrectos'));
+	   		
+            return View::make('user')->with(array('Message'=>'hola'));
+
 	   		}
 	
 		}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
 			//echo 'su E-mail es requerido.';
-			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			//return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 		}
 
 		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
 			//echo 'su contraseña es requerida.';
-			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			//return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 		}
 
 		catch (Cartalyst\Sentry\Users\WrongPasswordException $e){
 			//echo 'contraseña incorrecta, intente de nuevo.';
-			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			//return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 		}
 
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
 			//echo 'usuario no encontrado.';
-			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			//return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 		}
 
 		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e){
 			//echo 'User is not activated.';
-			return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			//return Redirect::to('/')->with('Message', 'Usuario y/o Contraseña Incorrectos' );
+			return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 		}
 	}
 

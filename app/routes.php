@@ -11,9 +11,20 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/', function() {
+  if(Sentry::check()){
+        $user = Sentry::getUser();
+        if($user->hasAccess('admin')){          
+          return Redirect::to('/admin');
+        } else if($user->hasAccess('user')){
+          return Redirect::to('/search');
+        } else {
+          return 'El usuario no cuenta con permisos';
+        }
+  }else{
+    // Vista de login
     return View::make('user');
+  }
 });
 
 // Route de Lectura de XLS
@@ -24,10 +35,32 @@ Route::get('/administrador', 'UserController@registerUser');
 Route::get('/search', function()
 {
   if(Sentry::check()){
-    return View::make('buscar');
+    $user = Sentry::getUser();
+    if($user->hasAccess('admin')){          
+      return Redirect::to('/searchtesis');
+    } else if($user->hasAccess('user')){
+      return View::make('buscarUser');
+    } else {
+      return 'El usuario no cuenta con permisos';
+    }
   }else{
       return Redirect::to('/user');
   }
+});
+
+Route::get('/searchtesis', function(){
+  if(Sentry::check()){
+      $user = Sentry::getUser();
+      if($user->hasAccess('admin')){          
+        return View::make('admin.buscar');
+      } else if($user->hasAccess('user')){
+        return Redirect::to('/search');
+      } else {
+        return 'El usuario no cuenta con permisos';
+      }
+    }else{
+      return Redirect::to('/user');
+    }
 });
 
 Route::get('/newtesis', function()
@@ -48,10 +81,11 @@ Route::get('/deletetesis', function()
     }
 });
 
-Route::get('/searchtesis', function()
+
+Route::get('/searchtesisUser', function()
 {
   if(Sentry::check()){
-      return View::make('admin.buscar');
+      return View::make('buscarUser');
     }else{
       return Redirect::to('/user');
     }

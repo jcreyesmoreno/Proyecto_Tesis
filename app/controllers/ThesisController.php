@@ -109,7 +109,17 @@ class ThesisController extends Controller{
 
             $search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
                         
-        return View::make('thesis')->with('Thesis', $search);
+        //return View::make('thesis')->with('Thesis', $search);
+
+            $user = Sentry::getUser()->permissions;
+            $type=''; 
+            if(isset($user['admin'])){                  
+                $type='admin';
+            }
+            else if(isset($user['user'])){
+                $type='user';
+            }
+            return View::make('thesis')->with(array('Thesis'=>$search,'Type'=>$type));
 
         }else{
             return "no se encontro la Tesis";
@@ -146,12 +156,15 @@ class ThesisController extends Controller{
                     unlink($thesis);
                 }                            
 
-                return Redirect::to('/search');
+                //return Redirect::to('/searchtesis');
+                return Response::json(array("status" => 200));
             }else{
-                return Redirect::to('/search');
+                //return Redirect::to('/searchtesis');
+                return Response::json(array("status" => 400, "message" => "La tesis no se pudo eliminar", "valor" => $id)); 
             }        
         }else{
-                return Redirect:: to("/");
+            //return Redirect:: to("/");
+            return Response::json(array("status" => 401));
         }
     }
                 
