@@ -1,4 +1,4 @@
-<?php
+Complete todo los Campos<?php
 
 class ThesisController extends Controller{
     
@@ -86,12 +86,15 @@ class ThesisController extends Controller{
                     $ModelThesis->thesis = $ruta.'/'.$tesis;
 
                     if($ModelThesis->save()){
-                        return Redirect::to('/newtesis')->with('Message', 'La Tesis se Agrego Correctamente' );
+                        //return Redirect::to('/newtesis')->with('Message', 'La Tesis se Agrego Correctamente' );
+                        return View::make('admin.alta')->with(array('Message' => 'La Tesis se Agrego Correctamente' , 'status' => 'success') );
                     }else{
-                        return "Error al Guardar la Tesis";
+                        //return "Error al Guardar la Tesis";
+                        return View::make('admin.alta')->with(array('Message' => 'Error al Guardar la Tesis' , 'status' => 'danger' ));
                     }
                 }else{
-                    return Redirect::to('/newtesis')->with('Message', 'Complete todo los Campos');
+                    //return Redirect::to('/newtesis')->with('Message', 'Complete todo los Campos');
+                    return View::make('admin.alta')->with(array('Message' => 'Complete todo los Campos', 'status' => 'warning'));
                 }
                             
             }else{

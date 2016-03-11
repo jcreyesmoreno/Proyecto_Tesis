@@ -4,14 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+  {{ HTML::script('js/alta.js') }}
   {{ HTML::style('dist/login.css') }}
-    @if(isset($Message))
-      <div class="alert alert-success alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert">&times;
-      </button>
-      <strong>¡Listo!</strong> La tesis ha sido guardada correctamente.
-      </div>
-    @endif
     <h4 align="center">INGRESA LOS DATOS DE LA NUEVA TESIS</h4> <br />
     <div class="form-group">
       <form enctype="multipart/form-data" action="/thesis" method="post">
@@ -61,8 +55,6 @@
         <option value="2012">2012</option>
         <option value="2013">2013</option>
     </select>
-  
-
         <br />
         <label>Seleccionar Indice(PDF)
         <input type="file" id="Seleccionar Indice" name="indice" required="required"></label>
@@ -79,9 +71,14 @@
         <button type="text" class="btn btn-success btn-lg" name="entrar">  
         <span class="glyphicon glyphicon-book"></span> Agregar tesis
         </button>
-        
-
     <!--<input type="submit" class="btn btn-success btn-lg" name="entrar" value="Agregar Tesis">-->
     </form>
+      @if(isset($Message))
+        <div class="alert alert-{{$status}} alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;
+        </button>
+        <strong>{{$Message}}</strong>
+        </div>
+      @endif
     </div>
 @endsection

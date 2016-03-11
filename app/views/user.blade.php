@@ -11,10 +11,10 @@
 			</div>
 		@endif		
 		<form action="/login" method="post" name="flogin" id="flogin">
-			<label>Usuario</label>
+			<label>Usuario:</label>
 			<input type="text" name="number" id="correo" class="form-control input-lg" required="required" placeholder="Usuario"> 
 			<br />
-			<label>Contraseña</label>
+			<label>Contraseña:</label>
 			<input type="password" name="passwd" id="passwd" class="form-control input-lg" required="required" placeholder="Contraseña"> 
 			<!--<p class="text-center"><input type="submit" class="btn btn-success btn-lg btn-block" name="entrar" value="Ingresar">-->
 	        <br />
