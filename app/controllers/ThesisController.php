@@ -111,23 +111,45 @@ class ThesisController extends Controller{
             $year = Input::get("year");
 
             $search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
-                        
-        //return View::make('thesis')->with('Thesis', $search);
+
+            //return View::make('thesis')->with('Thesis', $search);
 
             $user = Sentry::getUser()->permissions;
-            $type=''; 
-            if(isset($user['admin'])){                  
+            $type='';
+
+            if(isset($user['admin'])){
                 $type='admin';
             }
+
             else if(isset($user['user'])){
                 $type='user';
             }
-            return View::make('thesis')->with(array('Thesis'=>$search,'Type'=>$type));
+
+            $fields = array();
+
+            if ($title && $title != "") {
+              $fields['title'] = $title;
+            }
+
+            if ($author && $author != "") {
+              $fields['author'] = $author;
+            }
+
+            if ($career && $career != "") {
+              $fields['career'] = $career;
+            }
+
+            if ($year && $year != "") {
+              $fields['year'] = $year;
+            }
+
+            return View::make('thesis')->with(array('Thesis'=>$search,'Type'=>$type, 'fields' => $fields));
 
         }else{
             return "no se encontro la Tesis";
         }
     }
+
 
     public function getTableTesis () {
         if(Sentry::check()){
