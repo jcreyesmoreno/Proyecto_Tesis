@@ -7,7 +7,15 @@
   {{ HTML::script('js/alta.js') }}
   {{ HTML::style('dist/login.css') }}
     <h4 align="center">INGRESA LOS DATOS DE LA NUEVA TESIS</h4> <br />
+
     <div class="form-group">
+      @if(isset($Message))
+        <div class="alert alert-{{$status}} alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;
+        </button>
+        <strong>{{$Message}}</strong>
+        </div>
+      @endif
       <form enctype="multipart/form-data" action="/thesis" method="post">
       <label>Titulo</label>
       <input type="text" class="form-control input-lg" name="nombre" id="titulo_tesis" required="required" placeholder="Introduce el titulo de la tesis">
@@ -17,7 +25,7 @@
     
     <label>Carrera</label>
     <select class="form-control input-lg" name="carrera" required="required">
-      <option selected>--- Elige una carrera ---</option>
+      <option selected value="">--- Elige una carrera ---</option>
       <option value="AMBIENTAL">ING. AMBIENTAL</option>
       <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
       <option value="ELECTRONICA">ING. ELECTRONICA</option>
@@ -29,7 +37,7 @@
     </select>
     <label>Año</label>
       <select class="form-control input-lg" name="year" required="required">
-        <option selected>--- Elige un año ---</option>
+        <option selected value="">--- Elige un año ---</option>
         <option value="1990">1990</option>
         <option value="1991">1991</option>
         <option value="1992">1992</option>
@@ -54,6 +62,11 @@
         <option value="2011">2011</option>
         <option value="2012">2012</option>
         <option value="2013">2013</option>
+        <option value="2013">2014</option>
+        <option value="2013">2015</option>
+        <option value="2013">2016</option>
+        <option value="2013">2017</option>
+        <option value="2013">2018</option>
     </select>
         <br />
         <label>Seleccionar Indice(PDF)
@@ -69,16 +82,9 @@
         <br />
         <br />
         <button type="text" class="btn btn-success btn-lg" name="entrar">  
-        <span class="glyphicon glyphicon-book"></span> Agregar tesis
+        <span class="glyphicon glyphicon-book"></span> Agregar Tesis
         </button>
     <!--<input type="submit" class="btn btn-success btn-lg" name="entrar" value="Agregar Tesis">-->
     </form>
-      @if(isset($Message))
-        <div class="alert alert-{{$status}} alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert">&times;
-        </button>
-        <strong>{{$Message}}</strong>
-        </div>
-      @endif
     </div>
 @endsection

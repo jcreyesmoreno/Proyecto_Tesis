@@ -153,5 +153,7 @@ Route::get('/tesis/pdf/{id}', function ($id) {
 
 //--------------rutas de excel--------------------//
 Route::post('/update_excel', 'ExcelController@saveExcel');
+
+Route::post('/update/user', 'UserController@createUser');
 ?>
 

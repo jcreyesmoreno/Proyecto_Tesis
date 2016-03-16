@@ -1,6 +1,7 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+  {{ HTML::script('js/alert.js') }} 
   {{ HTML::style('dist/login.css') }}
 <section>
 	@if(isset($Mensaje))
@@ -12,7 +13,7 @@
     @endif
 	@if(isset($Thesis))
 		<div class="table">
-			<h2 align="center">RESULTADOS DE LA BÚSQUEDA por
+			<h2 align="center">RESULTADOS DE LA BÚSQUEDA POR
         @if(isset($fields['title']))
           TITULO: {{ $fields['title'] }}
         @endif

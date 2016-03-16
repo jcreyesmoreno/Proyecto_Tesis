@@ -15,11 +15,11 @@
         <label>Carrera</label>
 
       <select class="form-control input-lg" name="carrera">
-      <option selected>--- Elige una carrera ---</option>
+      <option value="" selected>--- Elige una carrera ---</option>
       <option value="AMBIENTAL">ING. AMBIENTAL</option>
       <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
       <option value="ELECTRONICA">ING. ELECTRONICA</option>
-      <option value="INIDUSTRIAL">ING. INDUSTRIAL</option>
+      <option value="INDUSTRIAL">ING. INDUSTRIAL</option>
       <option value="GESTION">ING. EN GESTION EMPRESARIAL</option>
       <option value="QUIMICA">ING. QUIMICA</option>
       <option value="SISTEMAS">ING. EN SISTEMAS COMPUTACIONALES</option>
@@ -28,7 +28,7 @@
 
         <label>Año</label>
         <select class="form-control input-lg" name="year">
-          <option selected>--- Elige un año ---</option>
+          <option value="" selected>--- Elige un año ---</option>
           <option value="1990">1990</option>
           <option value="1991">1991</option>
           <option value="1992">1992</option>
@@ -53,12 +53,17 @@
           <option value="2011">2011</option>
           <option value="2012">2012</option>
           <option value="2013">2013</option>
+          <option value="2013">2014</option>
+          <option value="2013">2015</option>
+          <option value="2013">2016</option>
+          <option value="2013">2017</option>
+          <option value="2013">2018</option>
         </select>
         <br />
-      <!--<input type="submit" class="btn btn-success btn-lg" name="entrar"  value="Buscar">-->
-      
+
         <button type="text" class="btn btn-success btn-lg" name="entrar"> 
           <span class="glyphicon glyphicon-search"></span> Buscar
         </button>
+
       </div>
 @endsection

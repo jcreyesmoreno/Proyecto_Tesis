@@ -1,4 +1,4 @@
-Complete todo los Campos<?php
+<?php
 
 class ThesisController extends Controller{
     
@@ -92,10 +92,10 @@ class ThesisController extends Controller{
                         //return "Error al Guardar la Tesis";
                         return View::make('admin.alta')->with(array('Message' => 'Error al Guardar la Tesis' , 'status' => 'danger' ));
                     }
-                }else{
+                }/*else{
                     //return Redirect::to('/newtesis')->with('Message', 'Complete todo los Campos');
                     return View::make('admin.alta')->with(array('Message' => 'Complete todo los Campos', 'status' => 'warning'));
-                }
+                }*/
                             
             }else{
                 return Redirect::to('/');
@@ -110,9 +110,46 @@ class ThesisController extends Controller{
             $career = Input::get("carrera");
             $year = Input::get("year");
 
-            $search = Thesis::whereRaw('title = ? or author = ? or career = ? or year = ?',array($title,$author,$career,$year))->get();
+            $inputFields = array();
+            $query = '';
 
-            //return View::make('thesis')->with('Thesis', $search);
+            if ($title && $title != "") {
+                $query = 'title = ?';
+                array_push($inputFields, $title); 
+            }
+
+            if ($author && $author != '') {
+                if ($query != '') {
+                    $query = $query.' and author = ?';
+                } else {
+                    $query = $query.'author = ?';    
+                }
+                array_push($inputFields, $author);
+            }
+
+            if ($career && $career != '') {
+                if ($query != '') {
+                    $query = $query.' and career = ?';
+                } else {
+                    $query = $query.'career = ?';    
+                }
+                array_push($inputFields, $career);
+            }
+
+            if ($year && $year != '') {
+                if ($query != '') {
+                    $query = $query.' and year = ?';
+                } else {
+                    $query = $query.'year = ?';    
+                }
+                array_push($inputFields, $year);
+            }
+
+            if (count($inputFields) == 0) {
+                return Redirect::to('/search');
+            }
+
+            $search = Thesis::whereRaw($query, $inputFields)->get();
 
             $user = Sentry::getUser()->permissions;
             $type='';

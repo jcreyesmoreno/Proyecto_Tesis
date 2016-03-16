@@ -39,7 +39,7 @@
    			}else{
 	   			//return Redirect::to('/')->with(array('Message' => 'Usuario y/o Contraseña Incorrectos'));
 	   		
-            return View::make('user')->with(array('Message'=>'hola'));
+            return View::make('user')->with(array('Message'=>'Usuario y/o Contraseña Incorrectos'));
 
 	   		}
 	
@@ -127,6 +127,47 @@
 
 		}else{
 			return "el archivo no existe";
+		}
+	}
+
+	public function createUser(){
+		if(Sentry::check()){
+			$user = Sentry::getUser();
+        	if($user->hasAccess('admin')){   
+	        	try{
+	        		$email = Input::get('email');
+					$password = Input::get('password');
+					$first_name = Input::get('first_name');
+					$last_name = Input::get('last_name');
+					$permissions = Input::get('permissions');
+
+					$user = Sentry::register(array(
+						'email'    => $email.'@itmina.com.mx',
+						'password' => $password,
+						'first_name' => $first_name, 
+						'last_name' => $last_name,
+						'activated' => true,
+						'permissions' => array($permissions => 1)
+					));
+
+					return Response::json(array('status' => 200));
+				}catch (Cartalyst\Sentry\Users\UserNotFoundException $e){
+					return Response::json(array('status' => 400, 'message' => "Necesitas permisos"));
+				}catch (Cartalyst\Sentry\Users\UserAlreadyActivatedException $e){
+					return Response::json(array('status' => 400, 'message' => "Necesitas permisoa 1"));
+				}catch (Cartalyst\Sentry\Users\LoginRequiredException $e){
+					return Response::json(array('status' => 400, 'message' => "Necesitas permisos 2"));
+				}catch (Cartalyst\Sentry\Users\PasswordRequiredException $e){
+					return Response::json(array('status' => 400, 'message' => "Necesitas permisos 3"));
+				}catch (Cartalyst\Sentry\Users\UserExistsException $e){
+					return Response::json(array('status' => 400, 'message' => "El usuario ya Existe!!!"));
+				}
+
+        	}else{
+        		return Response::json(array('status' => 400, 'message' => "Necesitas permisos"));
+        	} 			
+		}else{
+			return Response::json(array('status' => 401));
 		}
 	}
 }
