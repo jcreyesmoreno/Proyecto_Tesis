@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-	<h3 align="center">BIENVENIDO PARA PODER CONTINUAR INGRESA TU USUARIO Y CONTRASEÑA</h3>
+	<h3 align="center" class="title">BIENVENIDO PARA PODER CONTINUAR INGRESA TU USUARIO Y CONTRASEÑA</h3>
 	<br />
 	<div class="form-user">
 		@if(isset($Message))

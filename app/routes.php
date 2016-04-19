@@ -82,14 +82,14 @@ Route::get('/deletetesis', function()
 });
 
 
-Route::get('/searchtesisUser', function()
+/*Route::get('/searchtesisUser', function()
 {
   if(Sentry::check()){
       return View::make('buscarUser');
     }else{
       return Redirect::to('/user');
     }
-});
+});*/
 
 Route::get('/update', function()
 {

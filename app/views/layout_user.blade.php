@@ -15,7 +15,7 @@
 		<nav>
 			<ul id="mainmenu">
 				
-				<li><a href="/logout">Regresar al Menú Principal</a>
+				<li><a href="/logout">Cerrar Sesión</a>
 				</li>	
 			</ul>	
 		</nav>

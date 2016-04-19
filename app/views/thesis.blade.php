@@ -7,7 +7,7 @@
 	<section>
 		@if(isset($Thesis))
 			<div class="table">
-				<h2 align="center">RESULTADOS DE LA BÚSQUEDA
+				<h2 align="center">RESULTADOS DE LA BÚSQUEDA POR
 					@if(isset($fields['title']))
           				TITULO: {{ $fields['title'] }}
         			@endif

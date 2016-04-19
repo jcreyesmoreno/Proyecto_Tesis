@@ -179,7 +179,7 @@ class ThesisController extends Controller{
             if ($year && $year != "") {
               $fields['year'] = $year;
             }
-
+            //retorna la vista thesis con un arreglo de tres variables (tesis y tipo de tipo string y fields que es el arreglo que contiene la informacio de tesis)
             return View::make('thesis')->with(array('Thesis'=>$search,'Type'=>$type, 'fields' => $fields));
 
         }else{
@@ -188,13 +188,13 @@ class ThesisController extends Controller{
     }
 
 
-    public function getTableTesis () {
+    /*public function getTableTesis () {
         if(Sentry::check()){
                 return View::make('thesis');
         }else{
                 return "No se encontro la Tesis :(";
         }                
-    }
+    }*/
 
     public function deleteTesis () {
         if(Sentry::check()){

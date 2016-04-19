@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-escale=1.0">
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
   {{ HTML::style('dist/login.css') }}
-    <h4 align="center">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4><br />
+    <h4 align="center" class="title">SELECCIONA CUALQUIER METODO DE BUSQUEDA</h4><br />
       <div class="form-group">
         <form name="consulta" action="/search" method="post">
-        <label>Titulo</label>
+        <label>Título:</label>
         <input type="text" class="form-control input-lg" name="nombre" id="titulo_tesis" placeholder="Introduce el titulo de la tesis">
-        <label>Autor</label>
+        <label>Autor:</label>
         <input type="text" class="form-control input-lg" name="autor" id="autor" placeholder="Introduce el nombre del autor">
-        <label>Carrera</label>
+        <label>Carrera:</label>
 
-        <select class="form-control input-lg" name="carrera">
-        <option selected>--- Elige una carrera ---</option>
+        <select class="form-control input-lg" name="carrera" id="carrera">
+        <option value="" selected>--- Elige una carrera ---</option>
         <option value="AMBIENTAL">ING. AMBIENTAL</option>
         <option value="ELECTROMECANICA">ING. ELECTROMECANICA</option>
         <option value="ELECTRONICA">ING. ELECTRONICA</option>
@@ -26,9 +26,9 @@
         <option value="ADMINISTRACION">LIC. EN ADMINISTRACION</option>
         </select>
 
-        <label>Año</label>
-        <select class="form-control input-lg" name="year">
-          <option selected>--- Elige un año ---</option>
+        <label>Año:</label>
+        <select class="form-control input-lg" name="year" id="year">
+          <option value="" selected>--- Elige un año ---</option>
           <option value="1990">1990</option>
           <option value="1991">1991</option>
           <option value="1992">1992</option>
@@ -53,11 +53,11 @@
           <option value="2011">2011</option>
           <option value="2012">2012</option>
           <option value="2013">2013</option>
-          <option value="2013">2014</option>
-          <option value="2013">2015</option>
-          <option value="2013">2016</option>
-          <option value="2013">2017</option>
-          <option value="2013">2018</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
         </select>
         <br />
       <!--<input type="submit" class="btn btn-success btn-lg" name="entrar"  value="Buscar">-->
@@ -66,4 +66,4 @@
           <span class="glyphicon glyphicon-search"></span> Buscar
         </button>
       </div>
-@endsection
+  @endsection

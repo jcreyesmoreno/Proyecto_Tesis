@@ -15,14 +15,14 @@
 			<div class="titulo">
     		<img src="../images/barra_tec.JPG" />
 		<nav>
-			<ul id="mainmenu">
+			<ul id="mainmenu" class="nav nav-tabs">
 				<li><a href="/newtesis">Nueva tesis</a>
 				</li>
 				<li><a href="/searchtesis">Buscar y/o eliminar tesis</a>
 				</li>	
 				<li><a href="/update">Actualizar Alumnos</a>
 				</li>	
-				<li><a href="/logout">Salir</a>
+				<li><a href="/logout">Cerrar Sesión</a>
 				</li>	
 			</ul>	
 		</nav>
